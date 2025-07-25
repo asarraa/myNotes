@@ -1,0 +1,760 @@
+<!DOCTYPE html> <html><head>
+		<title>Computer security exercise sessions</title>
+		<base href="../../">
+		<meta id="root-path" root-path="../../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="Vault - Computer security exercise sessions">
+		<meta property="og:title" content="Computer security exercise sessions">
+		<meta property="og:description" content="Vault - Computer security exercise sessions">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="università/computer-security/computer-security-exercise-sessions.html">
+		<meta property="og:image" content="lib/media/pasted-image-20250608173212.png">
+		<meta property="og:site_name" content="Vault">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script type="module" async="" id="graph-view-script" src="lib/scripts/graph-view.js"></script><script async="" id="graph-wasm-script" src="lib/scripts/graph-wasm.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-render-worker-script" src="lib/scripts/graph-render-worker.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="tinycolor-script" src="lib/scripts/tinycolor.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="pixi-script" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.0/pixi.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="minisearch-script" src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><script async="" id="graph-data-script" src="lib/scripts/graph-data.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript></head><body class="publish css-settings-manager theme-light show-inline-title show-ribbon"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="search-input-container"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div class="search-input-clear-button" aria-label="Clear search"></div></div><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles">mjx-c.mjx-c1D465.TEX-I::before{padding:.442em .572em .011em 0;content:"x"}mjx-c.mjx-c39::before{padding:.666em .5em .022em 0;content:"9"}mjx-c.mjx-c33::before{padding:.665em .5em .022em 0;content:"3"}mjx-c.mjx-c37::before{padding:.676em .5em .022em 0;content:"7"}mjx-c.mjx-c35::before{padding:.666em .5em .022em 0;content:"5"}mjx-c.mjx-c38::before{padding:.666em .5em .022em 0;content:"8"}mjx-c.mjx-c2192::before{padding:.511em 1em .011em 0;content:"→"}mjx-c.mjx-cA0::before{padding:0 .25em 0 0;content:" "}mjx-c.mjx-c1D434.TEX-I::before{padding:.716em .75em 0 0;content:"A"}mjx-c.mjx-c5B::before{padding:.75em .278em .25em 0;content:"["}mjx-c.mjx-c5D::before{padding:.75em .278em .25em 0;content:"]"}mjx-c.mjx-c3C::before{padding:.54em .778em .04em 0;content:"<"}mjx-c.mjx-c3E::before{padding:.54em .778em .04em 0;content:">"}mjx-c.mjx-c1D453.TEX-I::before{padding:.705em .55em .205em 0;content:"f"}mjx-c.mjx-c1D43C.TEX-I::before{padding:.683em .504em 0 0;content:"I"}mjx-c.mjx-c1D436.TEX-I::before{padding:.705em .76em .022em 0;content:"C"}mjx-c.mjx-c1D443.TEX-I::before{padding:.683em .751em 0 0;content:"P"}mjx-c.mjx-c23::before{padding:.694em .833em .194em 0;content:"#"}mjx-c.mjx-c6B::before{padding:.694em .528em 0 0;content:"k"}mjx-c.mjx-c79::before{padding:.431em .528em .204em 0;content:"y"}mjx-c.mjx-c1D440.TEX-I::before{padding:.683em 1.051em 0 0;content:"M"}mjx-c.mjx-c71::before{padding:.442em .528em .194em 0;content:"q"}mjx-c.mjx-c36::before{padding:.666em .5em .022em 0;content:"6"}mjx-c.mjx-c1D445.TEX-I::before{padding:.683em .759em .021em 0;content:"R"}mjx-c.mjx-c1D444.TEX-I::before{padding:.704em .791em .194em 0;content:"Q"}mjx-c.mjx-c1D457.TEX-I::before{padding:.661em .412em .204em 0;content:"j"}mjx-c.mjx-c50::before{padding:.683em .681em 0 0;content:"P"}mjx-c.mjx-c43::before{padding:.705em .722em .021em 0;content:"C"}mjx-c.mjx-c49::before{padding:.683em .361em 0 0;content:"I"}mjx-c.mjx-c44::before{padding:.683em .764em 0 0;content:"D"}mjx-c.mjx-c7A::before{padding:.431em .444em 0 0;content:"z"}mjx-c.mjx-c1D450.TEX-I::before{padding:.442em .433em .011em 0;content:"c"}mjx-c.mjx-c1D45C.TEX-I::before{padding:.441em .485em .011em 0;content:"o"}mjx-c.mjx-c1D462.TEX-I::before{padding:.442em .572em .011em 0;content:"u"}mjx-c.mjx-c1D452.TEX-I::before{padding:.442em .466em .011em 0;content:"e"}mjx-c.mjx-c1D45F.TEX-I::before{padding:.442em .451em .011em 0;content:"r"}mjx-c.mjx-c2265::before{padding:.636em .778em .138em 0;content:"≥"}mjx-c.mjx-cD7::before{padding:.491em .778em 0 0;content:"×"}mjx-c.mjx-c2C::before{padding:.121em .278em .194em 0;content:","}mjx-mfrac{display:inline-block;text-align:left}mjx-frac{display:inline-block;vertical-align:.17em;padding:0 .22em}mjx-frac[type="d"]{vertical-align:.04em}mjx-frac[delims]{padding:0 .1em}mjx-frac[atop]{padding:0 .12em}mjx-frac[atop][delims]{padding:0}mjx-dtable{display:inline-table;width:100%}mjx-dtable>*{font-size:2000%}mjx-dbox{display:block;font-size:5%}mjx-num{display:block;text-align:center}mjx-den{display:block;text-align:center}mjx-mfrac[bevelled]>mjx-num{display:inline-block}mjx-mfrac[bevelled]>mjx-den{display:inline-block}mjx-den[align=right],mjx-num[align=right]{text-align:right}mjx-den[align=left],mjx-num[align=left]{text-align:left}mjx-nstrut{display:inline-block;height:.054em;width:0;vertical-align:-.054em}mjx-nstrut[type="d"]{height:.217em;vertical-align:-.217em}mjx-dstrut{display:inline-block;height:.505em;width:0}mjx-dstrut[type="d"]{height:.726em}mjx-line{display:block;box-sizing:border-box;min-height:1px;height:.06em;border-top:.06em solid;margin:.06em -.1em;overflow:hidden}mjx-line[type="d"]{margin:.18em -.1em}mjx-mrow{display:inline-block;text-align:left}mjx-c.mjx-c53::before{padding:.705em .556em .022em 0;content:"S"}mjx-c.mjx-c64::before{padding:.694em .556em .011em 0;content:"d"}mjx-c.mjx-c75::before{padding:.442em .556em .011em 0;content:"u"}mjx-c.mjx-c76::before{padding:.431em .528em .011em 0;content:"v"}mjx-c.mjx-c45::before{padding:.68em .681em 0 0;content:"E"}mjx-c.mjx-c78::before{padding:.431em .528em 0 0;content:"x"}mjx-c.mjx-c77::before{padding:.431em .722em .011em 0;content:"w"}mjx-c.mjx-c46::before{padding:.68em .653em 0 0;content:"F"}mjx-msub{display:inline-block;text-align:left}mjx-msup{display:inline-block;text-align:left}mjx-munderover{display:inline-block;text-align:left}mjx-munderover:not([limits=false]){padding-top:.1em}mjx-munderover:not([limits=false])>*{display:block}mjx-msubsup{display:inline-block;text-align:left}mjx-script{display:inline-block;padding-right:.05em;padding-left:.033em}mjx-script>mjx-spacer{display:block}mjx-texatom{display:inline-block;text-align:left}mjx-mtext{display:inline-block;text-align:left}mjx-mn{display:inline-block;text-align:left}mjx-c.mjx-c1D44A.TEX-I::before{padding:.683em 1.048em .022em 0;content:"W"}mjx-c.mjx-c28::before{padding:.75em .389em .25em 0;content:"("}mjx-c.mjx-c1D467.TEX-I::before{padding:.442em .465em .011em 0;content:"z"}mjx-c.mjx-c29::before{padding:.75em .389em .25em 0;content:")"}mjx-c.mjx-c1D437.TEX-I::before{padding:.683em .828em 0 0;content:"D"}mjx-c.mjx-c1D44F.TEX-I::before{padding:.694em .429em .011em 0;content:"b"}mjx-c.mjx-c1D456.TEX-I::before{padding:.661em .345em .011em 0;content:"i"}mjx-c.mjx-c1D45B.TEX-I::before{padding:.442em .6em .011em 0;content:"n"}mjx-c.mjx-c2211.TEX-S1::before{padding:.75em 1.056em .25em 0;content:"∑"}mjx-c.mjx-c69::before{padding:.669em .278em 0 0;content:"i"}mjx-c.mjx-c6E::before{padding:.442em .556em 0 0;content:"n"}mjx-c.mjx-c66::before{padding:.705em .372em 0 0;content:"f"}mjx-c.mjx-c1D461.TEX-I::before{padding:.626em .361em .011em 0;content:"t"}mjx-c.mjx-c3D::before{padding:.583em .778em .082em 0;content:"="}mjx-c.mjx-c73::before{padding:.448em .394em .011em 0;content:"s"}mjx-c.mjx-c6D::before{padding:.442em .833em 0 0;content:"m"}mjx-c.mjx-c74::before{padding:.615em .389em .01em 0;content:"t"}mjx-c.mjx-c68::before{padding:.694em .556em 0 0;content:"h"}mjx-c.mjx-c20::before{padding:0 .25em 0 0;content:" "}mjx-c.mjx-c2B::before{padding:.583em .778em .082em 0;content:"+"}mjx-c.mjx-c6F::before{padding:.448em .5em .01em 0;content:"o"}mjx-c.mjx-c65::before{padding:.448em .444em .011em 0;content:"e"}mjx-c.mjx-c72::before{padding:.442em .392em 0 0;content:"r"}mjx-c.mjx-c70::before{padding:.442em .556em .194em 0;content:"p"}mjx-c.mjx-c62::before{padding:.694em .556em .011em 0;content:"b"}mjx-c.mjx-c6C::before{padding:.694em .278em 0 0;content:"l"}mjx-c.mjx-c63::before{padding:.448em .444em .011em 0;content:"c"}mjx-c.mjx-c61::before{padding:.448em .5em .011em 0;content:"a"}mjx-c.mjx-c1D714.TEX-I::before{padding:.443em .622em .011em 0;content:"ω"}mjx-c.mjx-c2217::before{padding:.465em .5em 0 0;content:"∗"}mjx-c.mjx-c32::before{padding:.666em .5em 0 0;content:"2"}mjx-c.mjx-c1D458.TEX-I::before{padding:.694em .521em .011em 0;content:"k"}mjx-c.mjx-c30::before{padding:.666em .5em .022em 0;content:"0"}mjx-c.mjx-c1D460.TEX-I::before{padding:.442em .469em .01em 0;content:"s"}mjx-c.mjx-c1D45A.TEX-I::before{padding:.442em .878em .011em 0;content:"m"}mjx-c.mjx-c210E.TEX-I::before{padding:.694em .576em .011em 0;content:"h"}mjx-c.mjx-c31::before{padding:.666em .5em 0 0;content:"1"}mjx-c.mjx-c1D449.TEX-I::before{padding:.683em .769em .022em 0;content:"V"}mjx-container[jax=CHTML]{line-height:0}mjx-container [space="1"]{margin-left:.111em}mjx-container [space="2"]{margin-left:.167em}mjx-container [space="3"]{margin-left:.222em}mjx-container [space="4"]{margin-left:.278em}mjx-container [space="5"]{margin-left:.333em}mjx-container [rspace="1"]{margin-right:.111em}mjx-container [rspace="2"]{margin-right:.167em}mjx-container [rspace="3"]{margin-right:.222em}mjx-container [rspace="4"]{margin-right:.278em}mjx-container [rspace="5"]{margin-right:.333em}mjx-container [size="s"]{font-size:70.7%}mjx-container [size=ss]{font-size:50%}mjx-container [size=Tn]{font-size:60%}mjx-container [size=sm]{font-size:85%}mjx-container [size=lg]{font-size:120%}mjx-container [size=Lg]{font-size:144%}mjx-container [size=LG]{font-size:173%}mjx-container [size=hg]{font-size:207%}mjx-container [size=HG]{font-size:249%}mjx-container [width=full]{width:100%}mjx-box{display:inline-block}mjx-block{display:block}mjx-itable{display:inline-table}mjx-row{display:table-row}mjx-row>*{display:table-cell}mjx-mtext{display:inline-block}mjx-mstyle{display:inline-block}mjx-merror{display:inline-block;color:red;background-color:#ff0}mjx-mphantom{visibility:hidden}mjx-assistive-mml{top:0;left:0;clip:rect(1px,1px,1px,1px);user-select:none;position:absolute!important;padding:1px 0 0!important;border:0!important;display:block!important;width:auto!important;overflow:hidden!important}mjx-assistive-mml[display=block]{width:100%!important}mjx-math{display:inline-block;text-align:left;line-height:0;text-indent:0;font-style:normal;font-weight:400;font-size:100%;font-size-adjust:none;letter-spacing:normal;border-collapse:collapse;overflow-wrap:normal;word-spacing:normal;white-space:nowrap;direction:ltr;padding:1px 0}mjx-container[jax=CHTML][display=true]{display:block;text-align:center;margin:1em 0}mjx-container[jax=CHTML][display=true][width=full]{display:flex}mjx-container[jax=CHTML][display=true] mjx-math{padding:0}mjx-container[jax=CHTML][justify=left]{text-align:left}mjx-container[jax=CHTML][justify=right]{text-align:right}mjx-mi{display:inline-block;text-align:left}mjx-c{display:inline-block}mjx-utext{display:inline-block;padding:.75em 0 .2em}mjx-mo{display:inline-block;text-align:left}mjx-stretchy-h{display:inline-table;width:100%}mjx-stretchy-h>*{display:table-cell;width:0}mjx-stretchy-h>*>mjx-c{display:inline-block;transform:scaleX(1)}mjx-stretchy-h>*>mjx-c::before{display:inline-block;width:initial}mjx-stretchy-h>mjx-ext{overflow:clip visible;width:100%}mjx-stretchy-h>mjx-ext>mjx-c::before{transform:scaleX(500)}mjx-stretchy-h>mjx-ext>mjx-c{width:0}mjx-stretchy-h>mjx-beg>mjx-c{margin-right:-.1em}mjx-stretchy-h>mjx-end>mjx-c{margin-left:-.1em}mjx-stretchy-v{display:inline-block}mjx-stretchy-v>*{display:block}mjx-stretchy-v>mjx-beg{height:0}mjx-stretchy-v>mjx-end>mjx-c{display:block}mjx-stretchy-v>*>mjx-c{transform:scaleY(1);transform-origin:left center;overflow:hidden}mjx-stretchy-v>mjx-ext{display:block;height:100%;box-sizing:border-box;border:0 solid transparent;overflow:visible clip}mjx-stretchy-v>mjx-ext>mjx-c::before{width:initial;box-sizing:border-box}mjx-stretchy-v>mjx-ext>mjx-c{transform:scaleY(500) translateY(.075em);overflow:visible}mjx-mark{display:inline-block;height:0}mjx-c::before{display:block;width:0}.MJX-TEX{font-family:MJXZERO,MJXTEX}.TEX-B{font-family:MJXZERO,MJXTEX-B}.TEX-I{font-family:MJXZERO,MJXTEX-I}.TEX-MI{font-family:MJXZERO,MJXTEX-MI}.TEX-BI{font-family:MJXZERO,MJXTEX-BI}.TEX-S1{font-family:MJXZERO,MJXTEX-S1}.TEX-S2{font-family:MJXZERO,MJXTEX-S2}.TEX-S3{font-family:MJXZERO,MJXTEX-S3}.TEX-S4{font-family:MJXZERO,MJXTEX-S4}.TEX-A{font-family:MJXZERO,MJXTEX-A}.TEX-C{font-family:MJXZERO,MJXTEX-C}.TEX-CB{font-family:MJXZERO,MJXTEX-CB}.TEX-FR{font-family:MJXZERO,MJXTEX-FR}.TEX-FRB{font-family:MJXZERO,MJXTEX-FRB}.TEX-SS{font-family:MJXZERO,MJXTEX-SS}.TEX-SSB{font-family:MJXZERO,MJXTEX-SSB}.TEX-SSI{font-family:MJXZERO,MJXTEX-SSI}.TEX-SC{font-family:MJXZERO,MJXTEX-SC}.TEX-T{font-family:MJXZERO,MJXTEX-T}.TEX-V{font-family:MJXZERO,MJXTEX-V}.TEX-VB{font-family:MJXZERO,MJXTEX-VB}mjx-stretchy-h mjx-c,mjx-stretchy-v mjx-c{font-family:MJXZERO,MJXTEX-S1,MJXTEX-S4,MJXTEX,MJXTEX-A!important}@font-face{font-family:MJXZERO;src:url("lib/fonts/mathjax_zero.woff") format("woff")}@font-face{font-family:MJXTEX;src:url("lib/fonts/mathjax_main-regular.woff") format("woff")}@font-face{font-family:MJXTEX-B;src:url("lib/fonts/mathjax_main-bold.woff") format("woff")}@font-face{font-family:MJXTEX-I;src:url("lib/fonts/mathjax_math-italic.woff") format("woff")}@font-face{font-family:MJXTEX-MI;src:url("lib/fonts/mathjax_main-italic.woff") format("woff")}@font-face{font-family:MJXTEX-BI;src:url("lib/fonts/mathjax_math-bolditalic.woff") format("woff")}@font-face{font-family:MJXTEX-S1;src:url("lib/fonts/mathjax_size1-regular.woff") format("woff")}@font-face{font-family:MJXTEX-S2;src:url("lib/fonts/mathjax_size2-regular.woff") format("woff")}@font-face{font-family:MJXTEX-S3;src:url("lib/fonts/mathjax_size3-regular.woff") format("woff")}@font-face{font-family:MJXTEX-S4;src:url("lib/fonts/mathjax_size4-regular.woff") format("woff")}@font-face{font-family:MJXTEX-A;src:url("lib/fonts/mathjax_ams-regular.woff") format("woff")}@font-face{font-family:MJXTEX-C;src:url("lib/fonts/mathjax_calligraphic-regular.woff") format("woff")}@font-face{font-family:MJXTEX-CB;src:url("lib/fonts/mathjax_calligraphic-bold.woff") format("woff")}@font-face{font-family:MJXTEX-FR;src:url("lib/fonts/mathjax_fraktur-regular.woff") format("woff")}@font-face{font-family:MJXTEX-FRB;src:url("lib/fonts/mathjax_fraktur-bold.woff") format("woff")}@font-face{font-family:MJXTEX-SS;src:url("lib/fonts/mathjax_sansserif-regular.woff") format("woff")}@font-face{font-family:MJXTEX-SSB;src:url("lib/fonts/mathjax_sansserif-bold.woff") format("woff")}@font-face{font-family:MJXTEX-SSI;src:url("lib/fonts/mathjax_sansserif-italic.woff") format("woff")}@font-face{font-family:MJXTEX-SC;src:url("lib/fonts/mathjax_script-regular.woff") format("woff")}@font-face{font-family:MJXTEX-T;src:url("lib/fonts/mathjax_typewriter-regular.woff") format("woff")}@font-face{font-family:MJXTEX-V;src:url("lib/fonts/mathjax_vector-regular.woff") format("woff")}@font-face{font-family:MJXTEX-VB;src:url("lib/fonts/mathjax_vector-bold.woff") format("woff")}mjx-c.mjx-c1D447.TEX-I::before{padding:.677em .704em 0 0;content:"T"}mjx-c.mjx-c2212::before{padding:.583em .778em .082em 0;content:"−"}mjx-c.mjx-c1D446.TEX-I::before{padding:.705em .645em .022em 0;content:"S"}</style><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="1 - Buffer Overflow">1 - Buffer Overflow</h1><div class="el-h1 heading-wrapper"><div class="heading-children"><div class="el-h2 heading-wrapper"><h2 data-heading="1.1" dir="auto" class="heading" id="1.1"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>1.1</h2><div class="heading-children"><div class="el-p"><p dir="auto"><span alt="Pasted image 20250608173212.png" src="Pasted image 20250608173212.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20250608173212.png" src="lib/media/pasted-image-20250608173212.png"></span><br>
+<span alt="Pasted image 20250608173231.png" src="Pasted image 20250608173231.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20250608173231.png" src="lib/media/pasted-image-20250608173231.png"></span></p></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="recall" class="callout"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">Prolog and Epilogue</div></div><div class="callout-content">
+<p dir="auto">BP (base pointer) or FP (frame pointer) --&gt; pointer to a fixed location on a function's frame. From which actual parameters have positive offset, while local variables have negative offset.<br>
+SP --&gt; address of the top of the stack<br>
+IP --&gt; address of the current instruction being executed</p>
+<hr>
+<p dir="auto">ESP --&gt; register where the SP is stored (either last cell or first free cell's address)<br>
+EBP --&gt; register where the BP is stored<br>
+EIP --&gt; register where IP is stored</p>
+<p dir="auto">We racall that as soon as a function call is executed:<br>
+1. Parameters are pushed on the stack, <code>call</code> assembly instruction is executed<br>
+2. Prelude is executed </p>
+<p dir="auto"><strong>Call</strong><br>
+(pushes address of the next instruction to be executed after the called function returns. This will be the <em>saved EIP</em> or <em>RET</em>)<br>
+(moves address of the first instruction of the called function into EIP --&gt; call function)</p>
+<p dir="auto"><strong>Prolog</strong>:<br>
+<code>pushl %ebp</code> ---&gt; (push BP of caller into stack. This will be the <em>saved EBP</em>)<br>
+<code>mov %esp, %esp</code> ---&gt; (save current SP into EBP register)<br>
+<code>subl $SizeOfLocalVar, %esp</code> --&gt; (move SP down in order to make space for local variables)</p>
+<p dir="auto"><strong>Epilogue</strong>:<br>
+<code>mov %ebp, %esp</code> (current base is the new top of the stack)<br>
+<code>pop %ebp</code> (restore the saved EBP to the registry )<br>
+<code>ret</code> (pop saved EIP and jump there)</p>
+</div></div></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="recall" class="callout"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">Memory</div></div><div class="callout-content">
+<p dir="auto">Remember that memory can only be addressed in multiples of a word, which in our case is <strong>32 bits</strong>=<strong>4 bytes</strong></p>
+</div></div></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">High addresses</th>
+<th dir="auto"></th>
+<th dir="auto"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">Environment variables</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto">...</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto">...</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto">...</td>
+<td dir="ltr">-- Main Frame</td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">saved EIP</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">saved EBP (main)</td>
+<td dir="auto">--</td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">buf[28-31]</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">buf[24-27]</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">buf[20-23]</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto">...</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">buf[0-3]</td>
+<td dir="ltr">-- vuln frame</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>Low addresses</strong></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+</tr>
+</tbody>
+</table></div><div class="el-p"><p dir="auto"><span alt="Pasted image 20250608181014.png" src="Pasted image 20250608181014.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20250608181014.png" src="lib/media/pasted-image-20250608181014.png"></span></p></div><div class="el-p"><p dir="auto">In order to execute the shellcode, we need to store it into the stack and then overwrite the saved EIP in order to jump to it. However, we need to be sure that vuln() will return.<br>
+What we do:</p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">Fill the buffer with a string that will make us pass the strcpy check </li>
+<li data-line="1" dir="auto">Fill the middle part of thebuffer with NOP instructions, since we cannot be sure about the address our shellcode will end up</li>
+<li data-line="2" dir="auto">Fill the last part of the buffer with our shellcode</li>
+</ul></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">High addresses</th>
+<th dir="auto"></th>
+<th dir="auto"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="auto"></td>
+<td dir="auto">...</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto">...</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto">...</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto">...</td>
+<td dir="ltr">-- Main Frame</td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr"><em>address of A</em></td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">saved EBP (main)</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">0x12 0x34 0x56 0x78</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">0x90 0x90 0x90 0x90</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="ltr">A</td>
+<td dir="ltr">0x90 0x90 0x90 0x90</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">"ing!"</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">"ht_K"</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">"Knig"</td>
+<td dir="ltr">-- vuln frame</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>Low addresses</strong></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+</tr>
+</tbody>
+</table></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="1.2" dir="auto" class="heading" id="1.2"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>1.2</h2><div class="heading-children"><div class="el-p"><p dir="auto">Buffer overflow: <code>scanf</code> at line 08 will allow us to insert an exploit that will overwrite the EIP, since the buffer length is 8 but the scanf reads 25 characters' string.</p></div><div class="el-p"><p dir="auto">For our exploit to work, we need to be sure vuln() correctly returns and it is not aborted, thus:<br>
+we need to be sure <code>str = DAVINCI</code>. However, we notice that the buffer its reversed before the check.</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">High addresses</th>
+<th dir="auto"></th>
+<th dir="auto"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="auto"></td>
+<td dir="auto">...</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto">...</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto">...</td>
+<td dir="ltr">-- main frame ends here</td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">saved EIP</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">saved EBP</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">str[4-7]</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">str[0-3]</td>
+<td dir="ltr">--- vuln frame ends here</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>Low addresses</strong></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+</tr>
+</tbody>
+</table></div><div class="el-p"><p dir="auto">Situation in memory we desire to have right before the check:</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">High addresses</th>
+<th dir="auto"></th>
+<th dir="auto"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="auto">[24-27]</td>
+<td dir="ltr">0x38 0x37 0x36 0x35</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="ltr"><strong>A</strong></td>
+<td dir="ltr">0x34 0x33 0x32 0x31</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto">...</td>
+<td dir="ltr">-- main frame ends here</td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr"><em>address of A</em></td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto">[8-11]</td>
+<td dir="ltr">AAAA</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto">[4-7]</td>
+<td dir="ltr">"NCI:"</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto">[0-3]</td>
+<td dir="ltr">"DAVI"</td>
+<td dir="ltr">--- vuln frame ends here</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>Low addresses</strong></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+</tr>
+</tbody>
+</table></div><div class="el-p"><p dir="auto">That is in a normal setting the desired exploit is: <code>DAVINCI:AAAA&lt;ptr_to_shellcode&gt;\x31\x32\x33\x34\x35\x36\x37\x38</code></p></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="important" class="callout"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-flame"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div><div class="callout-title-inner">Code direction</div></div><div class="callout-content">
+<p dir="auto">The code is inserted in the usual way we insert stuff in the stack: starting from the lowest address and going up. So, the address of the shellcode with which we overwrite the saved EIP is actually the lowest one (A)</p>
+</div></div></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="important" class="callout"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-flame"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div><div class="callout-title-inner"><code>strrev</code> working</div></div><div class="callout-content">
+<p dir="auto">From what we can infer, strevv reverses the string passed as an argument: it's like reading the string from the end and writing it on the buffer as it was an input</p>
+</div></div></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="question" class="callout"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-help-circle"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></div><div class="callout-title-inner">Little endian?</div></div><div class="callout-content">
+<p dir="auto">Why we are now using little endian (stuff is mirrored inside the cell) and in the first exercise we didn't?</p>
+</div></div></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="important" class="callout"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-flame"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div><div class="callout-title-inner">Little endian and strings</div></div><div class="callout-content">
+<p dir="auto">Notice that even when using little endian, strings are represented normally</p>
+</div></div></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="question" class="callout"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-help-circle"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg></div><div class="callout-title-inner">Missing terminator </div></div><div class="callout-content">
+<p dir="auto">Why don't we see a terminator in the stack? In principle the <code>scanf</code> should automatically add the terminator after the input (in this case it actually will take 24 characters as input and then add the terminator, in order to reach the required 25 characters)</p>
+</div></div></div><div class="el-p"><p dir="auto">However, in our case the buffer is reversed. Thus, we need to reverse our string. The actual exploit will be:<br>
+<code>\x38\x37\x36\x35\x34\x33\x32\x31&lt;ptr_to_shellcode_inv&gt;AAAA:ICNIVAD</code></p></div><div class="el-p"><p dir="auto">The situation in memory we need to have before the <code>strrev</code>:</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr">High addresses</th>
+<th dir="auto"></th>
+<th dir="auto"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="auto">[24-27]</td>
+<td dir="ltr">"IVAD"</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="ltr"><strong>A</strong></td>
+<td dir="ltr">":ICN"</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto">...</td>
+<td dir="ltr">-- main frame ends here</td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">AAAA</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto">[8-11]</td>
+<td dir="ltr">address of A</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto">[4-7]</td>
+<td dir="ltr">0x31 0x32 0x33 0x34</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto">[0-3]</td>
+<td dir="ltr">0x35 0x36 0x37 0x38</td>
+<td dir="ltr">--- vuln frame ends here</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>Low addresses</strong></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+</tr>
+</tbody>
+</table></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="1.3" dir="auto" class="heading" id="1.3"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>1.3</h2><div class="heading-children"><div class="el-p"><p dir="auto">By analysing the code we see:</p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto"><strong>vulnerability</strong>: <code>scanf</code> at line 17. Since there is no check on maximum string length, we can perform a stack smashing by overwriting the saved EIP</li>
+<li data-line="1" dir="auto">there is a parameter to the <code>vuln()</code> function</li>
+<li data-line="2" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>the parameter, <code>n</code>, is then used to check if we should enter the if. So it must be overwritten accordingly to the check, otherwise we won't reach the vulnerability. --&gt; <strong>Condition 1:</strong> 0&lt;parameter&lt;16
+<ul>
+<li data-line="3" dir="auto">we need to avoid entering the <code>if</code> at line 14, which will lead to <code>abort()</code> --&gt;  <strong>Condition 2</strong>:  we need to put "HACK" in <code>s.buf</code>and we put something different from "X" in <code>s.buf[14]</code>. (notice that in the original text there is an error, the operator should be <code>||</code> not <code>&amp;&amp;</code>)</li>
+</ul>
+</li>
+<li data-line="4" dir="auto">avoid entering if at line 18, which will cause abort. --&gt; <strong>Condition 3</strong>: don't change the content of <code>s.sparrow</code></li>
+</ul></div><div class="el-p"><p dir="auto">Stack at line 12:</p></div><div class="el-p"><p dir="auto">struct is not dynamically allocated but statically, so it is allocated in the stack.</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr"><strong>High addresses</strong></th>
+<th dir="ltr"><strong>What</strong></th>
+<th dir="auto"></th>
+<th dir="auto"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr">argc</td>
+<td dir="ltr">-- main's frame end</td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr">saved EIP</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr">saved EBP</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">sparrow</td>
+<td dir="ltr">0xAD 0xAA 0xAA 0xBA</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr">tmp[12-15]</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="auto">...</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr">tmp[0-3]</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr">buf[12-15]</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="auto">...</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr">buf[0-3]</td>
+<td dir="ltr">-- vuln's frame end</td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+</tr>
+</tbody>
+</table></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="important" class="callout"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-flame"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div><div class="callout-title-inner">Struct static allocation</div></div><div class="callout-content">
+<p dir="auto">If a function has a struct as local variable and it is statically allocated, it is positioned in the stack as the sum of its parts. As always, it is allocated in "reverse order", so we position its fields on the stack by starting from the last field and go back towards the first</p>
+</div></div></div><div class="el-p"><p dir="auto">The shellcode is: <code>0x51 0x52 0x5a 0x5b</code>. Only 4 bytes, we can easily insert it in the stack.</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr"><strong>High addresses</strong></th>
+<th dir="ltr"><strong>What</strong></th>
+<th dir="auto"></th>
+<th dir="auto"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">argc</td>
+<td dir="ltr"><code>0x00 0x00 0x00 0x02</code></td>
+<td dir="ltr">-- main's frame end</td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr"><em>address A</em></td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr">saved EBP</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">sparrow</td>
+<td dir="ltr"><code>0xAD 0xAA 0xAA 0xBA</code></td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">tmp[12-15]</td>
+<td dir="ltr"><code>0x5b 0x5a 0x52 0x51</code></td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr"><code>0x90 0x90 0x90 0x90</code></td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr"><code>0x90 0x90 0x90 0x90</code></td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="ltr">Address A</td>
+<td dir="ltr">tmp[0-3]</td>
+<td dir="ltr"><code>0x90 0x90 0x90 0x90</code></td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">buf[12-15]</td>
+<td dir="ltr">"X" "X" "X" not rel</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr">not relevant</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr">not relevant</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">buf[0-3]</td>
+<td dir="ltr">"HACK"</td>
+<td dir="ltr">-- vuln's frame end</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>Low addresses</strong></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+</tr>
+</tbody>
+</table></div><div class="el-p"><p dir="auto"><span alt="Pasted image 20250612234139.png" src="Pasted image 20250612234139.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20250612234139.png" src="lib/media/pasted-image-20250612234139.png"></span></p></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="important" class="callout"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-flame"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div><div class="callout-title-inner"><code>System()</code>function</div></div><div class="callout-content">
+<p dir="auto"><code>&gt; int system(const char *__command__);  </code><br>
+command: A pointer to a null-terminated string that contains the command we want to execute.</p>
+</div></div></div><div class="el-p"><p dir="auto">In our case, the command we want to execute is <code>/bin/secret</code>. For this reason, we need to have this null-terminated string somewhere in memory, and make system use a pointer to it as parameter.</p></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr"><strong>High addresses</strong></th>
+<th dir="ltr"><strong>What</strong></th>
+<th dir="auto"></th>
+<th dir="auto"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr"><strong>address A</strong></td>
+<td dir="ltr">The address to the command</td>
+</tr>
+<tr>
+<td dir="ltr">add1</td>
+<td dir="auto"></td>
+<td dir="ltr"><strong>exit</strong></td>
+<td dir="ltr">-- main's frame end</td>
+</tr>
+<tr>
+<td dir="ltr">add2</td>
+<td dir="ltr">former saved EIP</td>
+<td dir="ltr"><strong><code>0xf7e38da0</code></strong></td>
+<td dir="ltr">system addr</td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr">saved EBP (not relevant)</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">sparrow</td>
+<td dir="ltr"><code>0xAD 0xAA 0xAA 0xBA</code></td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">tmp[12-15]</td>
+<td dir="ltr"><code>0x5b 0x5a 0x52 0x51</code></td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr"><strong>"ret\0"</strong></td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr"><strong>"/sec"</strong></td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="ltr">Address A</td>
+<td dir="ltr">tmp[0-3]</td>
+<td dir="ltr"><strong>"/bin"</strong></td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">buf[12-15]</td>
+<td dir="ltr">"X" "X" "X" not rel</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr">not relevant</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="ltr">not relevant</td>
+<td dir="auto"></td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">buf[0-3]</td>
+<td dir="ltr">"HACK"</td>
+<td dir="ltr">-- vuln's frame end</td>
+</tr>
+<tr>
+<td dir="ltr"><strong>Low addresses</strong></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+</tr>
+</tbody>
+</table></div><div class="el-p"><p dir="auto">What happens as soon as the function returns?</p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">system's address is the saved EIP, so the <code>ret</code> instruction will pop its address and load it into EIP. Since the loaded address is the address of a function (<code>system()</code> in this case), the prelude is done: the old EBP is pushed on the stack, thus at this point the situation is the following.</li>
+</ul></div><div class="el-table" dir="ltr" style="overflow-x: auto;"><table>
+<thead>
+<tr>
+<th dir="ltr"><strong>High addresses</strong></th>
+<th dir="ltr"><strong>What</strong></th>
+<th dir="auto"></th>
+<th dir="auto"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">parameter</td>
+<td dir="ltr"><strong>address A</strong></td>
+<td dir="ltr">The address to the command</td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">EIP (corresponds to add1)</td>
+<td dir="ltr"><strong>exit</strong></td>
+<td dir="ltr">-- main's frame end</td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="ltr">EBP (corresponds to add2)</td>
+<td dir="ltr">new EBP</td>
+<td dir="ltr">system addr</td>
+</tr>
+<tr>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+<td dir="auto"></td>
+</tr>
+</tbody>
+</table></div><div class="el-p"><p dir="auto">As we see, during the system() execution, we have the frame we needed like to have: exit as return address and address A as function parameter. This takes as to the following important point:</p></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="important" class="callout"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-flame"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div><div class="callout-title-inner">Where to put parameters and return address of called function after overwriting saved EIP</div></div><div class="callout-content">
+<p dir="auto">When we overwrite the EIP with the address of a function, we need to rember that the <code>ret</code> will pop that address and then the prelude of the function will be executed, pushing the EBP on the stack: that is, the cell of the overwritten EIP is where the EBP of the called function will be placed. So the simply: <strong>when we overwrite a saved EIP, that cell will contain the saved EBP of the called function, the cell above (toward higher addresses) will contain the saved EIP of the called function and the cell above again will contain the parameter to that function</strong><br>
+(see example above)</p>
+</div></div></div></div></div></div></div><div class="el-h1 heading-wrapper"><h1 data-heading="2 - format strings vulnerability" dir="auto" class="heading" id="2_-_format_strings_vulnerability">2 - format strings vulnerability</h1><div class="heading-children"><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="important" class="callout"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-flame"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path></svg></div><div class="callout-title-inner">Format strings vulnerability basics</div></div><div class="callout-content">
+<p dir="auto">In format string vulnerability we exploit <code>printf(x)</code> where we are able to define <code>x</code>.<br>
+We can start from how <code>printf</code> works:</p>
+<ul>
+<li data-line="3" dir="auto">According to the calling convention, the parameters for a <code>printf</code> call are pushed on the stack by the caller. The other arguments, such a pointer the <em>format string</em> itself, are pushed on the stack. Usually the format string itself is in some position in the stack, and what's pushed as argument a pointer to it.<br>
+For example, if we have something like <code>printf("AAAA %x %x", value1, value2)</code>. The stack will be</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>High addresses</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>"AAAA"</td>
+</tr>
+<tr>
+<td></td>
+<td>"%x%x"</td>
+</tr>
+<tr>
+<td></td>
+<td>...</td>
+</tr>
+<tr>
+<td></td>
+<td>value2</td>
+</tr>
+<tr>
+<td></td>
+<td>value1</td>
+</tr>
+<tr>
+<td></td>
+<td>pointer to format string</td>
+</tr>
+<tr>
+<td></td>
+<td>EIP</td>
+</tr>
+<tr>
+<td></td>
+<td>EBP</td>
+</tr>
+</tbody>
+</table>
+<p dir="auto">Thus, inserting <code>%x</code> in the <code>printf</code> without any corresponding parameter will result to printing whatever is on the stack, where it would expect its arguments to be.</p>
+<p dir="auto">Also, we can use special <code>printf</code> operator to print an arbitrary number of characters and to write something in the stack:</p>
+<ul>
+<li data-line="21" dir="auto">%n = write, in the address pointed to by the argument, the <em>number of chars (bytes) printed so far</em>. That is, it takes whatever is on the stack corresponding to its position (it works as %x, but the latter simply prints its argument out, %n does something else with it), interprets it as an address, goes to that location and write in that location the number of char printed so far. We need: <strong>address</strong> on the stack, corresponding to a <strong>target</strong> cell where to write into.</li>
+<li data-line="22" dir="auto"><code>%[k]c</code>: prints out a number k of characters.<br>
+We can use this operator in order to easily decide the <em>number of chars (bytes) printed so far</em>, which is useful for the <code>%n</code> operator. In practice, the <em>number of chars (bytes) printed so far</em> is a very big number which corresponds to the <strong>shellcode</strong> we want to write on the <strong>target</strong>.</li>
+<li data-line="24" dir="auto"><code>%[k]$x</code>: allows to print the k-th parameter. For example <code>%2$x</code> write the same as the second <code>%x</code> in <code>%x %x</code>.<br>
+We can use this operator to understand the <strong>pos</strong> between where the format string is located on the stack and the top of the stack (where we are.</li>
+<li data-line="26" dir="auto">Combining the first and the third, we get <code>%[k]$n</code>, which writes in the memory location whose address it finds in position k on the stack, the <em>number of chars (bytes) printed so far</em></li>
+</ul>
+<p dir="auto">The attack: we want to write in the <strong>target</strong> memory cell, whose <strong>address</strong> is at distance <strong>pos</strong> from the top of the stack, a <strong>shellcode</strong>.<br>
+The exploit is a format string like:<br>
+<code>address %[K]c %[pos]n</code></p>
+<p dir="auto">What happens if we pass it to a <code>printf</code>.</p>
+<ul>
+<li data-line="33" dir="auto">The format string itself will end up in some position in the stack.</li>
+<li data-line="34" dir="auto">the <code>%[pos]n</code> operator will at the <strong>address</strong> located at <strong>pos</strong> position in the stack (which we want to be our <strong>target</strong>), the number of characters <code>length(address)+K</code>, which we need to be our <strong>shellcode</strong>.</li>
+</ul>
+<p dir="auto">By carefully choosing the parameters of the exploit, we can write what we want in the target. Usually we can chose the saved EIP to be our target. So our <strong>address</strong><br>
+Since the <strong>address</strong> could be very big, and we need to write a number of characters similar to <strong>address</strong> (using the %$c operator), we perform two distinct writings, by splitting the <strong>target</strong> in two parts. After this consideration and some maths about what parameters to use, here is how the final exploit should be built:</p>
+<p dir="auto"><span alt="Pasted image 20250617191032.png" src="Pasted image 20250617191032.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20250617191032.png" src="lib/media/pasted-image-20250617191032.png"></span><br>
+<span alt="Pasted image 20250617191041.png" src="Pasted image 20250617191041.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20250617191041.png" src="lib/media/pasted-image-20250617191041.png"></span></p>
+</div></div></div><div class="mod-footer mod-ui"></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder">
+		<div class="graph-view-container">
+			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+			<canvas id="graph-canvas" class="hide" width="512px" height="512px"></canvas>
+		</div>
+		</div></div><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="università/computer-security/computer-security-exercise-sessions.html#1 - Buffer Overflow"><div class="tree-item-contents heading-link" heading-name="1 - Buffer Overflow"><span class="tree-item-title">1 - Buffer Overflow</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="2"><a class="tree-link" href="università/computer-security/computer-security-exercise-sessions.html#1.1"><div class="tree-item-contents heading-link" heading-name="1.1"><span class="tree-item-title">1.1</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="università/computer-security/computer-security-exercise-sessions.html#1.2"><div class="tree-item-contents heading-link" heading-name="1.2"><span class="tree-item-title">1.2</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="università/computer-security/computer-security-exercise-sessions.html#1.3"><div class="tree-item-contents heading-link" heading-name="1.3"><span class="tree-item-title">1.3</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div><div class="tree-item" data-depth="1"><a class="tree-link" href="università/computer-security/computer-security-exercise-sessions.html#2_-_format_strings_vulnerability"><div class="tree-item-contents heading-link" heading-name="2 - format strings vulnerability"><span class="tree-item-title">2 - format strings vulnerability</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>

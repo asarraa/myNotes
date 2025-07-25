@@ -1,0 +1,588 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\ifPDFTeX
+  \TeXXeTstate=1
+  \newcommand{\RL}[1]{\beginR #1\endR}
+  \newcommand{\LR}[1]{\beginL #1\endL}
+  \newenvironment{RTL}{\beginR}{\endR}
+  \newenvironment{LTR}{\beginL}{\endL}
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Computer security exercise sessions},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Computer security exercise sessions}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{1 - Buffer Overflow}\label{buffer-overflow}
+
+\subsection{1.1}\label{section}
+
+\pandocbounded{\includegraphics[keepaspectratio,alt={Pasted image 20250608173212.png}]{/home/francesco/Documenti/Documents/Vault/Pasted image 20250608173212.png}}\\
+\pandocbounded{\includegraphics[keepaspectratio,alt={Pasted image 20250608173231.png}]{/home/francesco/Documenti/Documents/Vault/Pasted image 20250608173231.png}}
+
+Prolog and Epilogue
+
+BP (base pointer) or FP (frame pointer) -\/-\textgreater{} pointer to a
+fixed location on a function\textquotesingle s frame. From which actual
+parameters have positive offset, while local variables have negative
+offset.\\
+SP -\/-\textgreater{} address of the top of the stack\\
+IP -\/-\textgreater{} address of the current instruction being executed
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+ESP -\/-\textgreater{} register where the SP is stored (either last cell
+or first free cell\textquotesingle s address)\\
+EBP -\/-\textgreater{} register where the BP is stored\\
+EIP -\/-\textgreater{} register where IP is stored
+
+We racall that as soon as a function call is executed:\\
+1. Parameters are pushed on the stack, \texttt{call} assembly
+instruction is executed\\
+2. Prelude is executed
+
+\textbf{Call}\\
+(pushes address of the next instruction to be executed after the called
+function returns. This will be the \emph{saved EIP} or \emph{RET})\\
+(moves address of the first instruction of the called function into EIP
+-\/-\textgreater{} call function)
+
+\textbf{Prolog}:\\
+\texttt{pushl\ \%ebp} -\/-\/-\textgreater{} (push BP of caller into
+stack. This will be the \emph{saved EBP})\\
+\texttt{mov\ \%esp,\ \%esp} -\/-\/-\textgreater{} (save current SP into
+EBP register)\\
+\texttt{subl\ \$SizeOfLocalVar,\ \%esp} -\/-\textgreater{} (move SP down
+in order to make space for local variables)
+
+\textbf{Epilogue}:\\
+\texttt{mov\ \%ebp,\ \%esp} (current base is the new top of the stack)\\
+\texttt{pop\ \%ebp} (restore the saved EBP to the registry )\\
+\texttt{ret} (pop saved EIP and jump there)
+
+Memory
+
+Remember that memory can only be addressed in multiples of a word, which
+in our case is \textbf{32 bits}=\textbf{4 bytes}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+High addresses & & \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+& Environment variables & \\
+& ... & \\
+& ... & \\
+& ... & -\/- Main Frame \\
+& saved EIP & \\
+& saved EBP (main) & -\/- \\
+& buf{[}28-31{]} & \\
+& buf{[}24-27{]} & \\
+& buf{[}20-23{]} & \\
+& ... & \\
+& buf{[}0-3{]} & -\/- vuln frame \\
+\textbf{Low addresses} & & \\
+\end{longtable}
+
+\pandocbounded{\includegraphics[keepaspectratio,alt={Pasted image 20250608181014.png}]{/home/francesco/Documenti/Documents/Vault/Pasted image 20250608181014.png}}
+
+In order to execute the shellcode, we need to store it into the stack
+and then overwrite the saved EIP in order to jump to it. However, we
+need to be sure that vuln() will return.\\
+What we do:
+
+\begin{itemize}
+\tightlist
+\item
+  Fill the buffer with a string that will make us pass the strcpy check
+\item
+  Fill the middle part of thebuffer with NOP instructions, since we
+  cannot be sure about the address our shellcode will end up
+\item
+  Fill the last part of the buffer with our shellcode
+\end{itemize}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+High addresses & & \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+& ... & \\
+& ... & \\
+& ... & \\
+& ... & -\/- Main Frame \\
+& \emph{address of A} & \\
+& saved EBP (main) & \\
+& 0x12 0x34 0x56 0x78 & \\
+& 0x90 0x90 0x90 0x90 & \\
+A & 0x90 0x90 0x90 0x90 & \\
+& "ing!" & \\
+& "ht\_K" & \\
+& "Knig" & -\/- vuln frame \\
+\textbf{Low addresses} & & \\
+\end{longtable}
+
+\subsection{1.2}\label{section-1}
+
+Buffer overflow: \texttt{scanf} at line 08 will allow us to insert an
+exploit that will overwrite the EIP, since the buffer length is 8 but
+the scanf reads 25 characters\textquotesingle{} string.
+
+For our exploit to work, we need to be sure vuln() correctly returns and
+it is not aborted, thus:\\
+we need to be sure \texttt{str\ =\ DAVINCI}. However, we notice that the
+buffer its reversed before the check.
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+High addresses & & \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+& ... & \\
+& ... & \\
+& ... & -\/- main frame ends here \\
+& saved EIP & \\
+& saved EBP & \\
+& str{[}4-7{]} & \\
+& str{[}0-3{]} & -\/-\/- vuln frame ends here \\
+\textbf{Low addresses} & & \\
+\end{longtable}
+
+Situation in memory we desire to have right before the check:
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+High addresses & & \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+{[}24-27{]} & 0x38 0x37 0x36 0x35 & \\
+\textbf{A} & 0x34 0x33 0x32 0x31 & \\
+& ... & -\/- main frame ends here \\
+& \emph{address of A} & \\
+{[}8-11{]} & AAAA & \\
+{[}4-7{]} & "NCI:" & \\
+{[}0-3{]} & "DAVI" & -\/-\/- vuln frame ends here \\
+\textbf{Low addresses} & & \\
+\end{longtable}
+
+That is in a normal setting the desired exploit is:
+\texttt{DAVINCI:AAAA\textless{}ptr\_to\_shellcode\textgreater{}\textbackslash{}x31\textbackslash{}x32\textbackslash{}x33\textbackslash{}x34\textbackslash{}x35\textbackslash{}x36\textbackslash{}x37\textbackslash{}x38}
+
+Code direction
+
+The code is inserted in the usual way we insert stuff in the stack:
+starting from the lowest address and going up. So, the address of the
+shellcode with which we overwrite the saved EIP is actually the lowest
+one (A)
+
+\texttt{strrev} working
+
+From what we can infer, strevv reverses the string passed as an
+argument: it\textquotesingle s like reading the string from the end and
+writing it on the buffer as it was an input
+
+Little endian?
+
+Why we are now using little endian (stuff is mirrored inside the cell)
+and in the first exercise we didn\textquotesingle t?
+
+Little endian and strings
+
+Notice that even when using little endian, strings are represented
+normally
+
+Missing terminator
+
+Why don\textquotesingle t we see a terminator in the stack? In principle
+the \texttt{scanf} should automatically add the terminator after the
+input (in this case it actually will take 24 characters as input and
+then add the terminator, in order to reach the required 25 characters)
+
+However, in our case the buffer is reversed. Thus, we need to reverse
+our string. The actual exploit will be:\\
+\texttt{\textbackslash{}x38\textbackslash{}x37\textbackslash{}x36\textbackslash{}x35\textbackslash{}x34\textbackslash{}x33\textbackslash{}x32\textbackslash{}x31\textless{}ptr\_to\_shellcode\_inv\textgreater{}AAAA:ICNIVAD}
+
+The situation in memory we need to have before the \texttt{strrev}:
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+High addresses & & \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+{[}24-27{]} & "IVAD" & \\
+\textbf{A} & ":ICN" & \\
+& ... & -\/- main frame ends here \\
+& AAAA & \\
+{[}8-11{]} & address of A & \\
+{[}4-7{]} & 0x31 0x32 0x33 0x34 & \\
+{[}0-3{]} & 0x35 0x36 0x37 0x38 & -\/-\/- vuln frame ends here \\
+\textbf{Low addresses} & & \\
+\end{longtable}
+
+\subsection{1.3}\label{section-2}
+
+By analysing the code we see:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{vulnerability}: \texttt{scanf} at line 17. Since there is no
+  check on maximum string length, we can perform a stack smashing by
+  overwriting the saved EIP
+\item
+  there is a parameter to the \texttt{vuln()} function
+\item
+  the parameter, \texttt{n}, is then used to check if we should enter
+  the if. So it must be overwritten accordingly to the check, otherwise
+  we won\textquotesingle t reach the vulnerability. -\/-\textgreater{}
+  \textbf{Condition 1:} 0\textless parameter\textless16
+
+  \begin{itemize}
+  \tightlist
+  \item
+    we need to avoid entering the \texttt{if} at line 14, which will
+    lead to \texttt{abort()} -\/-\textgreater{} \textbf{Condition 2}: we
+    need to put "HACK" in \texttt{s.buf}and we put something different
+    from "X" in \texttt{s.buf{[}14{]}}. (notice that in the original
+    text there is an error, the operator should be
+    \texttt{\textbar{}\textbar{}} not \texttt{\&\&})
+  \end{itemize}
+\item
+  avoid entering if at line 18, which will cause abort.
+  -\/-\textgreater{} \textbf{Condition 3}: don\textquotesingle t change
+  the content of \texttt{s.sparrow}
+\end{itemize}
+
+Stack at line 12:
+
+struct is not dynamically allocated but statically, so it is allocated
+in the stack.
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+\textbf{High addresses} & \textbf{What} & & \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+& & & \\
+& & argc & -\/- main\textquotesingle s frame end \\
+& & saved EIP & \\
+& & saved EBP & \\
+& sparrow & 0xAD 0xAA 0xAA 0xBA & \\
+& & tmp{[}12-15{]} & \\
+& & ... & \\
+& & tmp{[}0-3{]} & \\
+& & buf{[}12-15{]} & \\
+& & ... & \\
+& & buf{[}0-3{]} & -\/- vuln\textquotesingle s frame end \\
+& & & \\
+& & & \\
+\end{longtable}
+
+Struct static allocation
+
+If a function has a struct as local variable and it is statically
+allocated, it is positioned in the stack as the sum of its parts. As
+always, it is allocated in "reverse order", so we position its fields on
+the stack by starting from the last field and go back towards the first
+
+The shellcode is: \texttt{0x51\ 0x52\ 0x5a\ 0x5b}. Only 4 bytes, we can
+easily insert it in the stack.
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+\textbf{High addresses} & \textbf{What} & & \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+& & & \\
+& argc & \texttt{0x00\ 0x00\ 0x00\ 0x02} & -\/- main\textquotesingle s
+frame end \\
+& & \emph{address A} & \\
+& & saved EBP & \\
+& sparrow & \texttt{0xAD\ 0xAA\ 0xAA\ 0xBA} & \\
+& tmp{[}12-15{]} & \texttt{0x5b\ 0x5a\ 0x52\ 0x51} & \\
+& & \texttt{0x90\ 0x90\ 0x90\ 0x90} & \\
+& & \texttt{0x90\ 0x90\ 0x90\ 0x90} & \\
+Address A & tmp{[}0-3{]} & \texttt{0x90\ 0x90\ 0x90\ 0x90} & \\
+& buf{[}12-15{]} & "X" "X" "X" not rel & \\
+& & not relevant & \\
+& & not relevant & \\
+& buf{[}0-3{]} & "HACK" & -\/- vuln\textquotesingle s frame end \\
+\textbf{Low addresses} & & & \\
+\end{longtable}
+
+\pandocbounded{\includegraphics[keepaspectratio,alt={Pasted image 20250612234139.png}]{/home/francesco/Documenti/Documents/Vault/Pasted image 20250612234139.png}}
+
+\texttt{System()}function
+
+\texttt{\textgreater{}\ int\ system(const\ char\ *\_\_command\_\_);\ }\strut \\
+command: A pointer to a null-terminated string that contains the command
+we want to execute.
+
+In our case, the command we want to execute is \texttt{/bin/secret}. For
+this reason, we need to have this null-terminated string somewhere in
+memory, and make system use a pointer to it as parameter.
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+\textbf{High addresses} & \textbf{What} & & \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+& & \textbf{address A} & The address to the command \\
+add1 & & \textbf{exit} & -\/- main\textquotesingle s frame end \\
+add2 & former saved EIP & \textbf{\texttt{0xf7e38da0}} & system addr \\
+& & saved EBP (not relevant) & \\
+& sparrow & \texttt{0xAD\ 0xAA\ 0xAA\ 0xBA} & \\
+& tmp{[}12-15{]} & \texttt{0x5b\ 0x5a\ 0x52\ 0x51} & \\
+& & \textbf{"ret\textbackslash0"} & \\
+& & \textbf{"/sec"} & \\
+Address A & tmp{[}0-3{]} & \textbf{"/bin"} & \\
+& buf{[}12-15{]} & "X" "X" "X" not rel & \\
+& & not relevant & \\
+& & not relevant & \\
+& buf{[}0-3{]} & "HACK" & -\/- vuln\textquotesingle s frame end \\
+\textbf{Low addresses} & & & \\
+\end{longtable}
+
+What happens as soon as the function returns?
+
+\begin{itemize}
+\tightlist
+\item
+  system\textquotesingle s address is the saved EIP, so the \texttt{ret}
+  instruction will pop its address and load it into EIP. Since the
+  loaded address is the address of a function (\texttt{system()} in this
+  case), the prelude is done: the old EBP is pushed on the stack, thus
+  at this point the situation is the following.
+\end{itemize}
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule\noalign{}
+\textbf{High addresses} & \textbf{What} & & \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+& parameter & \textbf{address A} & The address to the command \\
+& EIP (corresponds to add1) & \textbf{exit} & -\/-
+main\textquotesingle s frame end \\
+& EBP (corresponds to add2) & new EBP & system addr \\
+& & & \\
+\end{longtable}
+
+As we see, during the system() execution, we have the frame we needed
+like to have: exit as return address and address A as function
+parameter. This takes as to the following important point:
+
+Where to put parameters and return address of called function after
+overwriting saved EIP
+
+When we overwrite the EIP with the address of a function, we need to
+rember that the \texttt{ret} will pop that address and then the prelude
+of the function will be executed, pushing the EBP on the stack: that is,
+the cell of the overwritten EIP is where the EBP of the called function
+will be placed. So the simply: \textbf{when we overwrite a saved EIP,
+that cell will contain the saved EBP of the called function, the cell
+above (toward higher addresses) will contain the saved EIP of the called
+function and the cell above again will contain the parameter to that
+function}\\
+(see example above)
+
+\section{2 - format strings
+vulnerability}\label{format-strings-vulnerability}
+
+Format strings vulnerability basics
+
+In format string vulnerability we exploit \texttt{printf(x)} where we
+are able to define \texttt{x}.\\
+We can start from how \texttt{printf} works:
+
+\begin{itemize}
+\tightlist
+\item
+  According to the calling convention, the parameters for a
+  \texttt{printf} call are pushed on the stack by the caller. The other
+  arguments, such a pointer the \emph{format string} itself, are pushed
+  on the stack. Usually the format string itself is in some position in
+  the stack, and what\textquotesingle s pushed as argument a pointer to
+  it.\\
+  For example, if we have something like
+  \texttt{printf("AAAA\ \%x\ \%x",\ value1,\ value2)}. The stack will be
+\end{itemize}
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+High addresses & \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+& "AAAA" \\
+& "\%x\%x" \\
+& ... \\
+& value2 \\
+& value1 \\
+& pointer to format string \\
+& EIP \\
+& EBP \\
+\end{longtable}
+
+Thus, inserting \texttt{\%x} in the \texttt{printf} without any
+corresponding parameter will result to printing whatever is on the
+stack, where it would expect its arguments to be.
+
+Also, we can use special \texttt{printf} operator to print an arbitrary
+number of characters and to write something in the stack:
+
+\begin{itemize}
+\tightlist
+\item
+  \%n = write, in the address pointed to by the argument, the
+  \emph{number of chars (bytes) printed so far}. That is, it takes
+  whatever is on the stack corresponding to its position (it works as
+  \%x, but the latter simply prints its argument out, \%n does something
+  else with it), interprets it as an address, goes to that location and
+  write in that location the number of char printed so far. We need:
+  \textbf{address} on the stack, corresponding to a \textbf{target} cell
+  where to write into.
+\item
+  \texttt{\%{[}k{]}c}: prints out a number k of characters.\\
+  We can use this operator in order to easily decide the \emph{number of
+  chars (bytes) printed so far}, which is useful for the \texttt{\%n}
+  operator. In practice, the \emph{number of chars (bytes) printed so
+  far} is a very big number which corresponds to the \textbf{shellcode}
+  we want to write on the \textbf{target}.
+\item
+  \texttt{\%{[}k{]}\$x}: allows to print the k-th parameter. For example
+  \texttt{\%2\$x} write the same as the second \texttt{\%x} in
+  \texttt{\%x\ \%x}.\\
+  We can use this operator to understand the \textbf{pos} between where
+  the format string is located on the stack and the top of the stack
+  (where we are.
+\item
+  Combining the first and the third, we get \texttt{\%{[}k{]}\$n}, which
+  writes in the memory location whose address it finds in position k on
+  the stack, the \emph{number of chars (bytes) printed so far}
+\end{itemize}
+
+The attack: we want to write in the \textbf{target} memory cell, whose
+\textbf{address} is at distance \textbf{pos} from the top of the stack,
+a \textbf{shellcode}.\\
+The exploit is a format string like:\\
+\texttt{address\ \%{[}K{]}c\ \%{[}pos{]}n}
+
+What happens if we pass it to a \texttt{printf}.
+
+\begin{itemize}
+\tightlist
+\item
+  The format string itself will end up in some position in the stack.
+\item
+  the \texttt{\%{[}pos{]}n} operator will at the \textbf{address}
+  located at \textbf{pos} position in the stack (which we want to be our
+  \textbf{target}), the number of characters \texttt{length(address)+K},
+  which we need to be our \textbf{shellcode}.
+\end{itemize}
+
+By carefully choosing the parameters of the exploit, we can write what
+we want in the target. Usually we can chose the saved EIP to be our
+target. So our \textbf{address}\\
+Since the \textbf{address} could be very big, and we need to write a
+number of characters similar to \textbf{address} (using the \%\$c
+operator), we perform two distinct writings, by splitting the
+\textbf{target} in two parts. After this consideration and some maths
+about what parameters to use, here is how the final exploit should be
+built:
+
+\pandocbounded{\includegraphics[keepaspectratio,alt={Pasted image 20250617191032.png}]{/home/francesco/Documenti/Documents/Vault/Pasted image 20250617191032.png}}\\
+\pandocbounded{\includegraphics[keepaspectratio,alt={Pasted image 20250617191041.png}]{/home/francesco/Documenti/Documents/Vault/Pasted image 20250617191041.png}}
+
+\end{document}

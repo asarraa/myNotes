@@ -1,0 +1,576 @@
+<!DOCTYPE html> <html><head>
+		<title>Project management</title>
+		<base href="../../../">
+		<meta id="root-path" root-path="../../../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="Vault - Project management">
+		<meta property="og:title" content="Project management">
+		<meta property="og:description" content="Vault - Project management">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="università/master-first-semester/software-engineering-2/project-management.html">
+		<meta property="og:image" content="università/master-first-semester/software-engineering-2/pasted-image-20250121121525.png">
+		<meta property="og:site_name" content="Vault">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script type="module" async="" id="graph-view-script" src="lib/scripts/graph-view.js"></script><script async="" id="graph-wasm-script" src="lib/scripts/graph-wasm.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-render-worker-script" src="lib/scripts/graph-render-worker.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="tinycolor-script" src="lib/scripts/tinycolor.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="pixi-script" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.0/pixi.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="minisearch-script" src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><script async="" id="graph-data-script" src="lib/scripts/graph-data.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript></head><body class="publish css-settings-manager theme-light show-inline-title show-ribbon"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="search-input-container"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div class="search-input-clear-button" aria-label="Clear search"></div></div><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles">mjx-c.mjx-c3F::before { padding: 0.705em 0.472em 0px 0px; content: "?"; }
+mjx-c.mjx-c2200::before { padding: 0.694em 0.556em 0.022em 0px; content: "∀"; }
+mjx-c.mjx-c1D711.TEX-I::before { padding: 0.442em 0.654em 0.218em 0px; content: "φ"; }
+mjx-c.mjx-c2205::before { padding: 0.772em 0.5em 0.078em 0px; content: "∅"; }
+mjx-c.mjx-c211D.TEX-A::before { padding: 0.683em 0.722em 0px 0px; content: "R"; }
+mjx-c.mjx-c226A::before { padding: 0.568em 1em 0.067em 0px; content: "≪"; }
+mjx-c.mjx-c2282::before { padding: 0.54em 0.778em 0.04em 0px; content: "⊂"; }
+mjx-c.mjx-c2248::before { padding: 0.483em 0.778em 0px 0px; content: "≈"; }
+mjx-c.mjx-c2286::before { padding: 0.636em 0.778em 0.138em 0px; content: "⊆"; }
+mjx-c.mjx-c21CF.TEX-A::before { padding: 0.534em 1em 0.035em 0px; content: "⇏"; }
+mjx-c.mjx-c27FA::before { padding: 0.525em 1.858em 0.024em 0px; content: "⟺"; }
+mjx-c.mjx-c230A::before { padding: 0.75em 0.444em 0.25em 0px; content: "⌊"; }
+mjx-c.mjx-c230B::before { padding: 0.75em 0.444em 0.25em 0px; content: "⌋"; }
+mjx-c.mjx-c1D438.TEX-I::before { padding: 0.68em 0.764em 0px 0px; content: "E"; }
+mjx-c.mjx-c2308::before { padding: 0.75em 0.444em 0.25em 0px; content: "⌈"; }
+mjx-c.mjx-c2309::before { padding: 0.75em 0.444em 0.25em 0px; content: "⌉"; }
+mjx-c.mjx-c56::before { padding: 0.683em 0.75em 0.022em 0px; content: "V"; }
+mjx-c.mjx-c1D6FF.TEX-I::before { padding: 0.717em 0.444em 0.01em 0px; content: "δ"; }
+mjx-c.mjx-c1D709.TEX-I::before { padding: 0.704em 0.438em 0.205em 0px; content: "ξ"; }
+mjx-c.mjx-c4C.TEX-C::before { padding: 0.705em 0.69em 0.022em 0px; content: "L"; }
+mjx-c.mjx-c28.TEX-S2::before { padding: 1.15em 0.597em 0.649em 0px; content: "("; }
+mjx-c.mjx-c29.TEX-S2::before { padding: 1.15em 0.597em 0.649em 0px; content: ")"; }
+mjx-c.mjx-c1D70F.TEX-I::before { padding: 0.431em 0.517em 0.013em 0px; content: "τ"; }
+mjx-c.mjx-c1D43B.TEX-I::before { padding: 0.683em 0.888em 0px 0px; content: "H"; }
+mjx-c.mjx-c2264::before { padding: 0.636em 0.778em 0.138em 0px; content: "≤"; }
+mjx-c.mjx-c223C::before { padding: 0.367em 0.778em 0px 0px; content: "∼"; }
+mjx-c.mjx-c1D6FC.TEX-I::before { padding: 0.442em 0.64em 0.011em 0px; content: "α"; }
+mjx-c.mjx-c1D716.TEX-I::before { padding: 0.431em 0.406em 0.011em 0px; content: "ϵ"; }
+mjx-c.mjx-c1D70C.TEX-I::before { padding: 0.442em 0.517em 0.216em 0px; content: "ρ"; }
+mjx-c.mjx-c52.TEX-C::before { padding: 0.682em 0.848em 0.022em 0px; content: "R"; }
+mjx-c.mjx-c1D53C.TEX-A::before { padding: 0.683em 0.667em 0px 0px; content: "E"; }
+mjx-mtable { display: inline-block; text-align: center; vertical-align: 0.25em; position: relative; box-sizing: border-box; border-spacing: 0px; border-collapse: collapse; }
+mjx-mstyle[size="s"] mjx-mtable { vertical-align: 0.354em; }
+mjx-labels { position: absolute; left: 0px; top: 0px; }
+mjx-table { display: inline-block; vertical-align: -0.5ex; box-sizing: border-box; }
+mjx-table > mjx-itable { vertical-align: middle; text-align: left; box-sizing: border-box; }
+mjx-labels > mjx-itable { position: absolute; top: 0px; }
+mjx-mtable[justify="left"] { text-align: left; }
+mjx-mtable[justify="right"] { text-align: right; }
+mjx-mtable[justify="left"][side="left"] { padding-right: 0px !important; }
+mjx-mtable[justify="left"][side="right"] { padding-left: 0px !important; }
+mjx-mtable[justify="right"][side="left"] { padding-right: 0px !important; }
+mjx-mtable[justify="right"][side="right"] { padding-left: 0px !important; }
+mjx-mtable[align] { vertical-align: baseline; }
+mjx-mtable[align="top"] > mjx-table { vertical-align: top; }
+mjx-mtable[align="bottom"] > mjx-table { vertical-align: bottom; }
+mjx-mtable[side="right"] mjx-labels { min-width: 100%; }
+mjx-mtr { display: table-row; text-align: left; }
+mjx-mtr[rowalign="top"] > mjx-mtd { vertical-align: top; }
+mjx-mtr[rowalign="center"] > mjx-mtd { vertical-align: middle; }
+mjx-mtr[rowalign="bottom"] > mjx-mtd { vertical-align: bottom; }
+mjx-mtr[rowalign="baseline"] > mjx-mtd { vertical-align: baseline; }
+mjx-mtr[rowalign="axis"] > mjx-mtd { vertical-align: 0.25em; }
+mjx-mtd { display: table-cell; text-align: center; padding: 0.215em 0.4em; }
+mjx-mtd:first-child { padding-left: 0px; }
+mjx-mtd:last-child { padding-right: 0px; }
+mjx-mtable > * > mjx-itable > :first-child > mjx-mtd { padding-top: 0px; }
+mjx-mtable > * > mjx-itable > :last-child > mjx-mtd { padding-bottom: 0px; }
+mjx-tstrut { display: inline-block; height: 1em; vertical-align: -0.25em; }
+mjx-labels[align="left"] > mjx-mtr > mjx-mtd { text-align: left; }
+mjx-labels[align="right"] > mjx-mtr > mjx-mtd { text-align: right; }
+mjx-mtd[extra] { padding: 0px; }
+mjx-mtd[rowalign="top"] { vertical-align: top; }
+mjx-mtd[rowalign="center"] { vertical-align: middle; }
+mjx-mtd[rowalign="bottom"] { vertical-align: bottom; }
+mjx-mtd[rowalign="baseline"] { vertical-align: baseline; }
+mjx-mtd[rowalign="axis"] { vertical-align: 0.25em; }
+mjx-stretchy-v.mjx-c28 mjx-beg mjx-c::before { content: "⎛"; padding: 1.154em 0.875em 0.655em 0px; }
+mjx-stretchy-v.mjx-c28 mjx-ext mjx-c::before { content: "⎜"; width: 0.875em; }
+mjx-stretchy-v.mjx-c28 mjx-end mjx-c::before { content: "⎝"; padding: 1.165em 0.875em 0.644em 0px; }
+mjx-stretchy-v.mjx-c28 > mjx-end { margin-top: -1.809em; }
+mjx-stretchy-v.mjx-c28 > mjx-ext { border-top-width: 1.779em; border-bottom-width: 1.779em; }
+mjx-stretchy-v.mjx-c29 mjx-beg mjx-c::before { content: "⎞"; padding: 1.154em 0.875em 0.655em 0px; }
+mjx-stretchy-v.mjx-c29 mjx-ext mjx-c::before { content: "⎟"; width: 0.875em; }
+mjx-stretchy-v.mjx-c29 mjx-end mjx-c::before { content: "⎠"; padding: 1.165em 0.875em 0.644em 0px; }
+mjx-stretchy-v.mjx-c29 > mjx-end { margin-top: -1.809em; }
+mjx-stretchy-v.mjx-c29 > mjx-ext { border-top-width: 1.779em; border-bottom-width: 1.779em; }
+mjx-c.mjx-c1D417.TEX-B::before { padding: 0.686em 0.869em 0px 0px; content: "X"; }
+mjx-c.mjx-c1D753.TEX-BI::before { padding: 0.694em 0.712em 0.202em 0px; content: "ϕ"; }
+mjx-c.mjx-c1D6BD.TEX-B::before { padding: 0.686em 0.831em 0px 0px; content: "Φ"; }
+mjx-c.mjx-c22EF::before { padding: 0.31em 1.172em 0px 0px; content: "⋯"; }
+mjx-c.mjx-c22EE::before { padding: 1.3em 0.278em 0.03em 0px; content: "⋮"; }
+mjx-c.mjx-c22F1::before { padding: 1.52em 1.282em 0px 0px; content: "⋱"; }
+mjx-msqrt { display: inline-block; text-align: left; }
+mjx-root { display: inline-block; white-space: nowrap; }
+mjx-surd { display: inline-block; vertical-align: top; }
+mjx-sqrt { display: inline-block; padding-top: 0.07em; }
+mjx-sqrt > mjx-box { border-top: 0.07em solid; }
+mjx-sqrt.mjx-tall > mjx-box { padding-left: 0.3em; margin-left: -0.3em; }
+mjx-c.mjx-c1D433.TEX-B::before { padding: 0.444em 0.511em 0px 0px; content: "z"; }
+mjx-c.mjx-c2207::before { padding: 0.683em 0.833em 0.033em 0px; content: "∇"; }
+mjx-c.mjx-c1D41A.TEX-B::before { padding: 0.453em 0.559em 0.006em 0px; content: "a"; }
+mjx-c.mjx-c1D408.TEX-B::before { padding: 0.686em 0.436em 0px 0px; content: "I"; }
+mjx-c.mjx-c1D42D.TEX-B::before { padding: 0.635em 0.447em 0.005em 0px; content: "t"; }
+mjx-c.mjx-c1D424.TEX-B::before { padding: 0.694em 0.607em 0px 0px; content: "k"; }
+mjx-c.mjx-c221A::before { padding: 0.8em 0.853em 0.2em 0px; content: "√"; }
+mjx-c.mjx-c2229::before { padding: 0.598em 0.667em 0.022em 0px; content: "∩"; }
+mjx-c.mjx-c222A::before { padding: 0.598em 0.667em 0.022em 0px; content: "∪"; }
+mjx-c.mjx-c1D432.TEX-B::before { padding: 0.444em 0.607em 0.2em 0px; content: "y"; }
+mjx-c.mjx-c4E.TEX-C::before { padding: 0.789em 0.979em 0.05em 0px; content: "N"; }
+mjx-c.mjx-c1D7CE.TEX-B::before { padding: 0.654em 0.575em 0.01em 0px; content: "0"; }
+mjx-c.mjx-c41.TEX-C::before { padding: 0.728em 0.819em 0.05em 0px; content: "A"; }
+mjx-c.mjx-c53.TEX-C::before { padding: 0.705em 0.642em 0.022em 0px; content: "S"; }
+mjx-c.mjx-c1D70B.TEX-I::before { padding: 0.431em 0.57em 0.011em 0px; content: "π"; }
+mjx-c.mjx-c1D6FE.TEX-I::before { padding: 0.441em 0.543em 0.216em 0px; content: "γ"; }
+mjx-c.mjx-c2032::before { padding: 0.56em 0.275em 0px 0px; content: "′"; }
+mjx-c.mjx-c2026::before { padding: 0.12em 1.172em 0px 0px; content: "…"; }
+mjx-c.mjx-cB7::before { padding: 0.31em 0.278em 0px 0px; content: "⋅"; }
+mjx-c.mjx-c2225::before { padding: 0.75em 0.5em 0.25em 0px; content: "∥"; }
+mjx-c.mjx-c2260::before { padding: 0.716em 0.778em 0.215em 0px; content: "≠"; }
+mjx-c.mjx-c1D44C.TEX-I::before { padding: 0.683em 0.763em 0px 0px; content: "Y"; }
+mjx-c.mjx-c1D719.TEX-I::before { padding: 0.694em 0.596em 0.205em 0px; content: "ϕ"; }
+mjx-c.mjx-c1D43F.TEX-I::before { padding: 0.683em 0.681em 0px 0px; content: "L"; }
+mjx-c.mjx-c4D.TEX-C::before { padding: 0.705em 1.201em 0.05em 0px; content: "M"; }
+mjx-c.mjx-c5E::before { padding: 0.694em 0.5em 0px 0px; content: "^"; }
+mjx-c.mjx-c2190::before { padding: 0.511em 1em 0.011em 0px; content: "←"; }
+mjx-c.mjx-c1D70E.TEX-I::before { padding: 0.431em 0.571em 0.011em 0px; content: "σ"; }
+mjx-c.mjx-c2061::before { padding: 0px; content: ""; }
+mjx-c.mjx-c1D441.TEX-I::before { padding: 0.683em 0.888em 0px 0px; content: "N"; }
+mjx-c.mjx-c67::before { padding: 0.453em 0.5em 0.206em 0px; content: "g"; }
+mjx-c.mjx-c220F.TEX-S1::before { padding: 0.75em 0.944em 0.25em 0px; content: "∏"; }
+mjx-c.mjx-c1D707.TEX-I::before { padding: 0.442em 0.603em 0.216em 0px; content: "μ"; }
+mjx-c.mjx-c44.TEX-C::before { padding: 0.683em 0.771em 0px 0px; content: "D"; }
+mjx-c.mjx-c1D43E.TEX-I::before { padding: 0.683em 0.889em 0px 0px; content: "K"; }
+mjx-c.mjx-c21D2::before { padding: 0.525em 1em 0.024em 0px; content: "⇒"; }
+mjx-c.mjx-c1D431.TEX-B::before { padding: 0.444em 0.607em 0px 0px; content: "x"; }
+mjx-c.mjx-c22C5::before { padding: 0.31em 0.278em 0px 0px; content: "⋅"; }
+mjx-c.mjx-c1D430.TEX-B::before { padding: 0.444em 0.831em 0px 0px; content: "w"; }
+mjx-c.mjx-c28.TEX-S4::before { padding: 1.75em 0.792em 1.249em 0px; content: "("; }
+mjx-c.mjx-c2211.TEX-S2::before { padding: 0.95em 1.444em 0.45em 0px; content: "∑"; }
+mjx-c.mjx-c29.TEX-S4::before { padding: 1.75em 0.792em 1.249em 0px; content: ")"; }
+mjx-c.mjx-c27F9::before { padding: 0.525em 1.638em 0.024em 0px; content: "⟹"; }
+mjx-c.mjx-c24::before { padding: 0.75em 0.5em 0.056em 0px; content: "$"; }
+mjx-c.mjx-c3A6::before { padding: 0.683em 0.722em 0px 0px; content: "Φ"; }
+mjx-c.mjx-c2E::before { padding: 0.12em 0.278em 0px 0px; content: "."; }
+mjx-mover { display: inline-block; text-align: left; }
+mjx-mover:not([limits="false"]) { padding-top: 0.1em; }
+mjx-mover:not([limits="false"]) > * { display: block; text-align: left; }
+mjx-c.mjx-c2308.TEX-S2::before { padding: 1.15em 0.528em 0.649em 0px; content: "⌈"; }
+mjx-c.mjx-c2309.TEX-S2::before { padding: 1.15em 0.528em 0.649em 0px; content: "⌉"; }
+mjx-c.mjx-c1D43A.TEX-I::before { padding: 0.705em 0.786em 0.022em 0px; content: "G"; }
+mjx-c.mjx-c5F::before { padding: 0px 0.5em 0.062em 0px; content: "_"; }
+mjx-c.mjx-c1D44B.TEX-I::before { padding: 0.683em 0.852em 0px 0px; content: "X"; }
+mjx-c.mjx-c7E::before { padding: 0.318em 0.5em 0px 0px; content: "~"; }
+mjx-c.mjx-c1D45E.TEX-I::before { padding: 0.442em 0.46em 0.194em 0px; content: "q"; }
+mjx-mspace { display: inline-block; text-align: left; }
+mjx-munder { display: inline-block; text-align: left; }
+mjx-over { text-align: left; }
+mjx-munder:not([limits="false"]) { display: inline-table; }
+mjx-munder > mjx-row { text-align: left; }
+mjx-under { padding-bottom: 0.1em; }
+mjx-c.mjx-c1D454.TEX-I::before { padding: 0.442em 0.477em 0.205em 0px; content: "g"; }
+mjx-c.mjx-c3A::before { padding: 0.43em 0.278em 0px 0px; content: ":"; }
+mjx-c.mjx-c221E::before { padding: 0.442em 1em 0.011em 0px; content: "∞"; }
+mjx-c.mjx-c1D463.TEX-I::before { padding: 0.443em 0.485em 0.011em 0px; content: "v"; }
+mjx-c.mjx-c1D464.TEX-I::before { padding: 0.443em 0.716em 0.011em 0px; content: "w"; }
+mjx-c.mjx-c1D439.TEX-I::before { padding: 0.68em 0.749em 0px 0px; content: "F"; }
+mjx-c.mjx-c222B.TEX-S2::before { padding: 1.36em 0.944em 0.862em 0px; content: "∫"; }
+mjx-c.mjx-c1D459.TEX-I::before { padding: 0.694em 0.298em 0.011em 0px; content: "l"; }
+mjx-c.mjx-c1D44E.TEX-I::before { padding: 0.441em 0.529em 0.01em 0px; content: "a"; }
+mjx-c.mjx-c1D451.TEX-I::before { padding: 0.694em 0.52em 0.01em 0px; content: "d"; }
+mjx-c.mjx-c1D442.TEX-I::before { padding: 0.704em 0.763em 0.022em 0px; content: "O"; }
+mjx-c.mjx-c1D466.TEX-I::before { padding: 0.442em 0.49em 0.205em 0px; content: "y"; }
+mjx-c.mjx-c1D706.TEX-I::before { padding: 0.694em 0.583em 0.012em 0px; content: "λ"; }
+mjx-c.mjx-c2F::before { padding: 0.75em 0.5em 0.25em 0px; content: "/"; }
+mjx-c.mjx-c1D45D.TEX-I::before { padding: 0.442em 0.503em 0.194em 0px; content: "p"; }
+mjx-c.mjx-c2208::before { padding: 0.54em 0.667em 0.04em 0px; content: "∈"; }
+mjx-c.mjx-c7B::before { padding: 0.75em 0.5em 0.25em 0px; content: "{"; }
+mjx-c.mjx-c7D::before { padding: 0.75em 0.5em 0.25em 0px; content: "}"; }
+mjx-c.mjx-c34::before { padding: 0.677em 0.5em 0px 0px; content: "4"; }
+mjx-c.mjx-c1D435.TEX-I::before { padding: 0.683em 0.759em 0px 0px; content: "B"; }
+mjx-c.mjx-c7C::before { padding: 0.75em 0.278em 0.249em 0px; content: "|"; }
+mjx-c.mjx-c1D448.TEX-I::before { padding: 0.683em 0.767em 0.022em 0px; content: "U"; }
+mjx-c.mjx-c1D465.TEX-I::before { padding: 0.442em 0.572em 0.011em 0px; content: "x"; }
+mjx-c.mjx-c39::before { padding: 0.666em 0.5em 0.022em 0px; content: "9"; }
+mjx-c.mjx-c33::before { padding: 0.665em 0.5em 0.022em 0px; content: "3"; }
+mjx-c.mjx-c37::before { padding: 0.676em 0.5em 0.022em 0px; content: "7"; }
+mjx-c.mjx-c35::before { padding: 0.666em 0.5em 0.022em 0px; content: "5"; }
+mjx-c.mjx-c38::before { padding: 0.666em 0.5em 0.022em 0px; content: "8"; }
+mjx-c.mjx-c2192::before { padding: 0.511em 1em 0.011em 0px; content: "→"; }
+mjx-c.mjx-cA0::before { padding: 0px 0.25em 0px 0px; content: " "; }
+mjx-c.mjx-c1D434.TEX-I::before { padding: 0.716em 0.75em 0px 0px; content: "A"; }
+mjx-c.mjx-c5B::before { padding: 0.75em 0.278em 0.25em 0px; content: "["; }
+mjx-c.mjx-c5D::before { padding: 0.75em 0.278em 0.25em 0px; content: "]"; }
+mjx-c.mjx-c3C::before { padding: 0.54em 0.778em 0.04em 0px; content: "<"; }
+mjx-c.mjx-c3E::before { padding: 0.54em 0.778em 0.04em 0px; content: ">"; }
+mjx-c.mjx-c1D453.TEX-I::before { padding: 0.705em 0.55em 0.205em 0px; content: "f"; }
+mjx-c.mjx-c1D43C.TEX-I::before { padding: 0.683em 0.504em 0px 0px; content: "I"; }
+mjx-c.mjx-c1D436.TEX-I::before { padding: 0.705em 0.76em 0.022em 0px; content: "C"; }
+mjx-c.mjx-c1D443.TEX-I::before { padding: 0.683em 0.751em 0px 0px; content: "P"; }
+mjx-c.mjx-c23::before { padding: 0.694em 0.833em 0.194em 0px; content: "#"; }
+mjx-c.mjx-c6B::before { padding: 0.694em 0.528em 0px 0px; content: "k"; }
+mjx-c.mjx-c79::before { padding: 0.431em 0.528em 0.204em 0px; content: "y"; }
+mjx-c.mjx-c1D440.TEX-I::before { padding: 0.683em 1.051em 0px 0px; content: "M"; }
+mjx-c.mjx-c71::before { padding: 0.442em 0.528em 0.194em 0px; content: "q"; }
+mjx-c.mjx-c36::before { padding: 0.666em 0.5em 0.022em 0px; content: "6"; }
+mjx-c.mjx-c1D445.TEX-I::before { padding: 0.683em 0.759em 0.021em 0px; content: "R"; }
+mjx-c.mjx-c1D444.TEX-I::before { padding: 0.704em 0.791em 0.194em 0px; content: "Q"; }
+mjx-c.mjx-c1D457.TEX-I::before { padding: 0.661em 0.412em 0.204em 0px; content: "j"; }
+mjx-c.mjx-c50::before { padding: 0.683em 0.681em 0px 0px; content: "P"; }
+mjx-c.mjx-c43::before { padding: 0.705em 0.722em 0.021em 0px; content: "C"; }
+mjx-c.mjx-c49::before { padding: 0.683em 0.361em 0px 0px; content: "I"; }
+mjx-c.mjx-c44::before { padding: 0.683em 0.764em 0px 0px; content: "D"; }
+mjx-c.mjx-c7A::before { padding: 0.431em 0.444em 0px 0px; content: "z"; }
+mjx-c.mjx-c1D450.TEX-I::before { padding: 0.442em 0.433em 0.011em 0px; content: "c"; }
+mjx-c.mjx-c1D45C.TEX-I::before { padding: 0.441em 0.485em 0.011em 0px; content: "o"; }
+mjx-c.mjx-c1D462.TEX-I::before { padding: 0.442em 0.572em 0.011em 0px; content: "u"; }
+mjx-c.mjx-c1D452.TEX-I::before { padding: 0.442em 0.466em 0.011em 0px; content: "e"; }
+mjx-c.mjx-c1D45F.TEX-I::before { padding: 0.442em 0.451em 0.011em 0px; content: "r"; }
+mjx-c.mjx-c2265::before { padding: 0.636em 0.778em 0.138em 0px; content: "≥"; }
+mjx-c.mjx-cD7::before { padding: 0.491em 0.778em 0px 0px; content: "×"; }
+mjx-c.mjx-c2C::before { padding: 0.121em 0.278em 0.194em 0px; content: ","; }
+mjx-mfrac { display: inline-block; text-align: left; }
+mjx-frac { display: inline-block; vertical-align: 0.17em; padding: 0px 0.22em; }
+mjx-frac[type="d"] { vertical-align: 0.04em; }
+mjx-frac[delims] { padding: 0px 0.1em; }
+mjx-frac[atop] { padding: 0px 0.12em; }
+mjx-frac[atop][delims] { padding: 0px; }
+mjx-dtable { display: inline-table; width: 100%; }
+mjx-dtable > * { font-size: 2000%; }
+mjx-dbox { display: block; font-size: 5%; }
+mjx-num { display: block; text-align: center; }
+mjx-den { display: block; text-align: center; }
+mjx-mfrac[bevelled] > mjx-num { display: inline-block; }
+mjx-mfrac[bevelled] > mjx-den { display: inline-block; }
+mjx-den[align="right"], mjx-num[align="right"] { text-align: right; }
+mjx-den[align="left"], mjx-num[align="left"] { text-align: left; }
+mjx-nstrut { display: inline-block; height: 0.054em; width: 0px; vertical-align: -0.054em; }
+mjx-nstrut[type="d"] { height: 0.217em; vertical-align: -0.217em; }
+mjx-dstrut { display: inline-block; height: 0.505em; width: 0px; }
+mjx-dstrut[type="d"] { height: 0.726em; }
+mjx-line { display: block; box-sizing: border-box; min-height: 1px; height: 0.06em; border-top: 0.06em solid; margin: 0.06em -0.1em; overflow: hidden; }
+mjx-line[type="d"] { margin: 0.18em -0.1em; }
+mjx-mrow { display: inline-block; text-align: left; }
+mjx-c.mjx-c53::before { padding: 0.705em 0.556em 0.022em 0px; content: "S"; }
+mjx-c.mjx-c64::before { padding: 0.694em 0.556em 0.011em 0px; content: "d"; }
+mjx-c.mjx-c75::before { padding: 0.442em 0.556em 0.011em 0px; content: "u"; }
+mjx-c.mjx-c76::before { padding: 0.431em 0.528em 0.011em 0px; content: "v"; }
+mjx-c.mjx-c45::before { padding: 0.68em 0.681em 0px 0px; content: "E"; }
+mjx-c.mjx-c78::before { padding: 0.431em 0.528em 0px 0px; content: "x"; }
+mjx-c.mjx-c77::before { padding: 0.431em 0.722em 0.011em 0px; content: "w"; }
+mjx-c.mjx-c46::before { padding: 0.68em 0.653em 0px 0px; content: "F"; }
+mjx-msub { display: inline-block; text-align: left; }
+mjx-msup { display: inline-block; text-align: left; }
+mjx-munderover { display: inline-block; text-align: left; }
+mjx-munderover:not([limits="false"]) { padding-top: 0.1em; }
+mjx-munderover:not([limits="false"]) > * { display: block; }
+mjx-msubsup { display: inline-block; text-align: left; }
+mjx-script { display: inline-block; padding-right: 0.05em; padding-left: 0.033em; }
+mjx-script > mjx-spacer { display: block; }
+mjx-texatom { display: inline-block; text-align: left; }
+mjx-mtext { display: inline-block; text-align: left; }
+mjx-mn { display: inline-block; text-align: left; }
+mjx-c.mjx-c1D44A.TEX-I::before { padding: 0.683em 1.048em 0.022em 0px; content: "W"; }
+mjx-c.mjx-c28::before { padding: 0.75em 0.389em 0.25em 0px; content: "("; }
+mjx-c.mjx-c1D467.TEX-I::before { padding: 0.442em 0.465em 0.011em 0px; content: "z"; }
+mjx-c.mjx-c29::before { padding: 0.75em 0.389em 0.25em 0px; content: ")"; }
+mjx-c.mjx-c1D437.TEX-I::before { padding: 0.683em 0.828em 0px 0px; content: "D"; }
+mjx-c.mjx-c1D44F.TEX-I::before { padding: 0.694em 0.429em 0.011em 0px; content: "b"; }
+mjx-c.mjx-c1D456.TEX-I::before { padding: 0.661em 0.345em 0.011em 0px; content: "i"; }
+mjx-c.mjx-c1D45B.TEX-I::before { padding: 0.442em 0.6em 0.011em 0px; content: "n"; }
+mjx-c.mjx-c2211.TEX-S1::before { padding: 0.75em 1.056em 0.25em 0px; content: "∑"; }
+mjx-c.mjx-c69::before { padding: 0.669em 0.278em 0px 0px; content: "i"; }
+mjx-c.mjx-c6E::before { padding: 0.442em 0.556em 0px 0px; content: "n"; }
+mjx-c.mjx-c66::before { padding: 0.705em 0.372em 0px 0px; content: "f"; }
+mjx-c.mjx-c1D461.TEX-I::before { padding: 0.626em 0.361em 0.011em 0px; content: "t"; }
+mjx-c.mjx-c3D::before { padding: 0.583em 0.778em 0.082em 0px; content: "="; }
+mjx-c.mjx-c73::before { padding: 0.448em 0.394em 0.011em 0px; content: "s"; }
+mjx-c.mjx-c6D::before { padding: 0.442em 0.833em 0px 0px; content: "m"; }
+mjx-c.mjx-c74::before { padding: 0.615em 0.389em 0.01em 0px; content: "t"; }
+mjx-c.mjx-c68::before { padding: 0.694em 0.556em 0px 0px; content: "h"; }
+mjx-c.mjx-c20::before { padding: 0px 0.25em 0px 0px; content: " "; }
+mjx-c.mjx-c2B::before { padding: 0.583em 0.778em 0.082em 0px; content: "+"; }
+mjx-c.mjx-c6F::before { padding: 0.448em 0.5em 0.01em 0px; content: "o"; }
+mjx-c.mjx-c65::before { padding: 0.448em 0.444em 0.011em 0px; content: "e"; }
+mjx-c.mjx-c72::before { padding: 0.442em 0.392em 0px 0px; content: "r"; }
+mjx-c.mjx-c70::before { padding: 0.442em 0.556em 0.194em 0px; content: "p"; }
+mjx-c.mjx-c62::before { padding: 0.694em 0.556em 0.011em 0px; content: "b"; }
+mjx-c.mjx-c6C::before { padding: 0.694em 0.278em 0px 0px; content: "l"; }
+mjx-c.mjx-c63::before { padding: 0.448em 0.444em 0.011em 0px; content: "c"; }
+mjx-c.mjx-c61::before { padding: 0.448em 0.5em 0.011em 0px; content: "a"; }
+mjx-c.mjx-c1D714.TEX-I::before { padding: 0.443em 0.622em 0.011em 0px; content: "ω"; }
+mjx-c.mjx-c2217::before { padding: 0.465em 0.5em 0px 0px; content: "∗"; }
+mjx-c.mjx-c32::before { padding: 0.666em 0.5em 0px 0px; content: "2"; }
+mjx-c.mjx-c1D458.TEX-I::before { padding: 0.694em 0.521em 0.011em 0px; content: "k"; }
+mjx-c.mjx-c30::before { padding: 0.666em 0.5em 0.022em 0px; content: "0"; }
+mjx-c.mjx-c1D460.TEX-I::before { padding: 0.442em 0.469em 0.01em 0px; content: "s"; }
+mjx-c.mjx-c1D45A.TEX-I::before { padding: 0.442em 0.878em 0.011em 0px; content: "m"; }
+mjx-c.mjx-c210E.TEX-I::before { padding: 0.694em 0.576em 0.011em 0px; content: "h"; }
+mjx-c.mjx-c31::before { padding: 0.666em 0.5em 0px 0px; content: "1"; }
+mjx-c.mjx-c1D449.TEX-I::before { padding: 0.683em 0.769em 0.022em 0px; content: "V"; }
+mjx-container[jax="CHTML"] { line-height: 0; }
+mjx-container [space="1"] { margin-left: 0.111em; }
+mjx-container [space="2"] { margin-left: 0.167em; }
+mjx-container [space="3"] { margin-left: 0.222em; }
+mjx-container [space="4"] { margin-left: 0.278em; }
+mjx-container [space="5"] { margin-left: 0.333em; }
+mjx-container [rspace="1"] { margin-right: 0.111em; }
+mjx-container [rspace="2"] { margin-right: 0.167em; }
+mjx-container [rspace="3"] { margin-right: 0.222em; }
+mjx-container [rspace="4"] { margin-right: 0.278em; }
+mjx-container [rspace="5"] { margin-right: 0.333em; }
+mjx-container [size="s"] { font-size: 70.7%; }
+mjx-container [size="ss"] { font-size: 50%; }
+mjx-container [size="Tn"] { font-size: 60%; }
+mjx-container [size="sm"] { font-size: 85%; }
+mjx-container [size="lg"] { font-size: 120%; }
+mjx-container [size="Lg"] { font-size: 144%; }
+mjx-container [size="LG"] { font-size: 173%; }
+mjx-container [size="hg"] { font-size: 207%; }
+mjx-container [size="HG"] { font-size: 249%; }
+mjx-container [width="full"] { width: 100%; }
+mjx-box { display: inline-block; }
+mjx-block { display: block; }
+mjx-itable { display: inline-table; }
+mjx-row { display: table-row; }
+mjx-row > * { display: table-cell; }
+mjx-mtext { display: inline-block; }
+mjx-mstyle { display: inline-block; }
+mjx-merror { display: inline-block; color: red; background-color: yellow; }
+mjx-mphantom { visibility: hidden; }
+mjx-assistive-mml { top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); user-select: none; position: absolute !important; padding: 1px 0px 0px !important; border: 0px !important; display: block !important; width: auto !important; overflow: hidden !important; }
+mjx-assistive-mml[display="block"] { width: 100% !important; }
+mjx-math { display: inline-block; text-align: left; line-height: 0; text-indent: 0px; font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; letter-spacing: normal; border-collapse: collapse; overflow-wrap: normal; word-spacing: normal; white-space: nowrap; direction: ltr; padding: 1px 0px; }
+mjx-container[jax="CHTML"][display="true"] { display: block; text-align: center; margin: 1em 0px; }
+mjx-container[jax="CHTML"][display="true"][width="full"] { display: flex; }
+mjx-container[jax="CHTML"][display="true"] mjx-math { padding: 0px; }
+mjx-container[jax="CHTML"][justify="left"] { text-align: left; }
+mjx-container[jax="CHTML"][justify="right"] { text-align: right; }
+mjx-mi { display: inline-block; text-align: left; }
+mjx-c { display: inline-block; }
+mjx-utext { display: inline-block; padding: 0.75em 0px 0.2em; }
+mjx-mo { display: inline-block; text-align: left; }
+mjx-stretchy-h { display: inline-table; width: 100%; }
+mjx-stretchy-h > * { display: table-cell; width: 0px; }
+mjx-stretchy-h > * > mjx-c { display: inline-block; transform: scaleX(1); }
+mjx-stretchy-h > * > mjx-c::before { display: inline-block; width: initial; }
+mjx-stretchy-h > mjx-ext { overflow: clip visible; width: 100%; }
+mjx-stretchy-h > mjx-ext > mjx-c::before { transform: scaleX(500); }
+mjx-stretchy-h > mjx-ext > mjx-c { width: 0px; }
+mjx-stretchy-h > mjx-beg > mjx-c { margin-right: -0.1em; }
+mjx-stretchy-h > mjx-end > mjx-c { margin-left: -0.1em; }
+mjx-stretchy-v { display: inline-block; }
+mjx-stretchy-v > * { display: block; }
+mjx-stretchy-v > mjx-beg { height: 0px; }
+mjx-stretchy-v > mjx-end > mjx-c { display: block; }
+mjx-stretchy-v > * > mjx-c { transform: scaleY(1); transform-origin: left center; overflow: hidden; }
+mjx-stretchy-v > mjx-ext { display: block; height: 100%; box-sizing: border-box; border: 0px solid transparent; overflow: visible clip; }
+mjx-stretchy-v > mjx-ext > mjx-c::before { width: initial; box-sizing: border-box; }
+mjx-stretchy-v > mjx-ext > mjx-c { transform: scaleY(500) translateY(0.075em); overflow: visible; }
+mjx-mark { display: inline-block; height: 0px; }
+mjx-c::before { display: block; width: 0px; }
+.MJX-TEX { font-family: MJXZERO, MJXTEX; }
+.TEX-B { font-family: MJXZERO, MJXTEX-B; }
+.TEX-I { font-family: MJXZERO, MJXTEX-I; }
+.TEX-MI { font-family: MJXZERO, MJXTEX-MI; }
+.TEX-BI { font-family: MJXZERO, MJXTEX-BI; }
+.TEX-S1 { font-family: MJXZERO, MJXTEX-S1; }
+.TEX-S2 { font-family: MJXZERO, MJXTEX-S2; }
+.TEX-S3 { font-family: MJXZERO, MJXTEX-S3; }
+.TEX-S4 { font-family: MJXZERO, MJXTEX-S4; }
+.TEX-A { font-family: MJXZERO, MJXTEX-A; }
+.TEX-C { font-family: MJXZERO, MJXTEX-C; }
+.TEX-CB { font-family: MJXZERO, MJXTEX-CB; }
+.TEX-FR { font-family: MJXZERO, MJXTEX-FR; }
+.TEX-FRB { font-family: MJXZERO, MJXTEX-FRB; }
+.TEX-SS { font-family: MJXZERO, MJXTEX-SS; }
+.TEX-SSB { font-family: MJXZERO, MJXTEX-SSB; }
+.TEX-SSI { font-family: MJXZERO, MJXTEX-SSI; }
+.TEX-SC { font-family: MJXZERO, MJXTEX-SC; }
+.TEX-T { font-family: MJXZERO, MJXTEX-T; }
+.TEX-V { font-family: MJXZERO, MJXTEX-V; }
+.TEX-VB { font-family: MJXZERO, MJXTEX-VB; }
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c { font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A !important; }
+@font-face { font-family: MJXZERO; src: url("lib/fonts/mathjax_zero.woff") format("woff"); }
+@font-face { font-family: MJXTEX; src: url("lib/fonts/mathjax_main-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-B; src: url("lib/fonts/mathjax_main-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-I; src: url("lib/fonts/mathjax_math-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-MI; src: url("lib/fonts/mathjax_main-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-BI; src: url("lib/fonts/mathjax_math-bolditalic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S1; src: url("lib/fonts/mathjax_size1-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S2; src: url("lib/fonts/mathjax_size2-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S3; src: url("lib/fonts/mathjax_size3-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S4; src: url("lib/fonts/mathjax_size4-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-A; src: url("lib/fonts/mathjax_ams-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-C; src: url("lib/fonts/mathjax_calligraphic-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-CB; src: url("lib/fonts/mathjax_calligraphic-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-FR; src: url("lib/fonts/mathjax_fraktur-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-FRB; src: url("lib/fonts/mathjax_fraktur-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SS; src: url("lib/fonts/mathjax_sansserif-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SSB; src: url("lib/fonts/mathjax_sansserif-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SSI; src: url("lib/fonts/mathjax_sansserif-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SC; src: url("lib/fonts/mathjax_script-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-T; src: url("lib/fonts/mathjax_typewriter-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-V; src: url("lib/fonts/mathjax_vector-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-VB; src: url("lib/fonts/mathjax_vector-bold.woff") format("woff"); }
+mjx-c.mjx-c1D447.TEX-I::before { padding: 0.677em 0.704em 0px 0px; content: "T"; }
+mjx-c.mjx-c2212::before { padding: 0.583em 0.778em 0.082em 0px; content: "−"; }
+mjx-c.mjx-c1D446.TEX-I::before { padding: 0.705em 0.645em 0.022em 0px; content: "S"; }
+</style><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="Project management">Project management</h1><div class="el-p"><p dir="auto"><a class="internal-link" data-href="06.ProjectManagement.pdf" href="università/master-first-semester/software-engineering-2/06.projectmanagement.pdf" target="_self" rel="noopener nofollow">Source</a></p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">Initiating</li>
+<li data-line="1" dir="auto">Planning</li>
+</ul></div><div class="el-h2 heading-wrapper"><h2 data-heading="Planning" dir="auto" class="heading" id="Planning"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Planning</h2><div class="heading-children"><div class="el-h3 heading-wrapper"><h3 data-heading="Project scheduling" dir="auto" class="heading" id="Project_scheduling"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Project scheduling</h3><div class="heading-children"><div class="el-p"><p dir="auto">Defines:<br>
+- what has to be done and when<br>
+- how the project parts fit together<br>
+- what work people have to do</p></div><div class="el-h4 heading-wrapper"><h4 data-heading="Terminology" dir="auto" class="heading" id="Terminology"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Terminology</h4><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">Tasks</li>
+<li data-line="1" dir="auto">Milestones</li>
+<li data-line="2" dir="auto">Deliverables</li>
+</ul></div></div></div></div></div><div class="el-h3 heading-wrapper"><h3 data-heading="Illustrating project schedule" dir="auto" class="heading" id="Illustrating_project_schedule"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Illustrating project schedule</h3><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><a data-tooltip-position="top" aria-label="Critical path method (CPM) for Project Planning > Gnatt charts" data-href="Critical path method (CPM) for Project Planning#Gnatt charts" href="università/master-first-semester/foundations-of-operations-research/theory/2.3-graph-shortest-path/related/critical-path-method-(cpm)-for-project-planning.html#Gnatt_charts" class="internal-link" target="_self" rel="noopener nofollow">Gnatt charts</a> are used for illustrate project schedule. They are the result of one of the following methods:
+<ul>
+<li data-line="1" dir="auto">Work Breakdown Structure</li>
+<li data-line="2" dir="auto">Precedence Diagram Method</li>
+<li data-line="3" dir="auto">Critical Path Method</li>
+</ul>
+</li>
+</ul></div><div class="el-h5 heading-wrapper"><h5 data-heading="Work Breakdown Structure (WBS)" dir="auto" class="heading" id="Work_Breakdown_Structure_(WBS)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Work Breakdown Structure (WBS)</h5><div class="heading-children"><div class="el-p"><p dir="auto">Breaks down the work that must be done into tasks that can be easy to estimate, assign, track.</p></div></div></div><div class="el-h5 heading-wrapper"><h5 data-heading="Precedence Diagram Method (PDM)" dir="auto" class="heading" id="Precedence_Diagram_Method_(PDM)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Precedence Diagram Method (PDM)</h5><div class="heading-children"><div class="el-p"><p dir="auto">Technique used for constructing a schedule starting from the precedence relationships between activities, defining which task (predecessor) triggers the other (successor) by using the following types of dependencies:</p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">finish to start: the finish of the predecessor triggers the start of the successor</li>
+<li data-line="1" dir="auto">start to start</li>
+<li data-line="2" dir="auto">finish to finish</li>
+<li data-line="3" dir="auto">start to finish</li>
+</ul></div><div class="el-p"><p dir="auto"><em>LAG time</em> can be added to dependencies in order to introduce a positive or negative delay.</p></div></div></div><div class="el-h5 heading-wrapper"><h5 data-heading="Critical Path Method (CPM)" dir="auto" class="heading" id="Critical_Path_Method_(CPM)"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Critical Path Method (CPM)</h5><div class="heading-children"><div class="el-p"><p dir="auto"><a data-tooltip-position="top" aria-label="Critical path method (CPM) for Project Planning" data-href="Critical path method (CPM) for Project Planning" href="università/master-first-semester/foundations-of-operations-research/theory/2.3-graph-shortest-path/related/critical-path-method-(cpm)-for-project-planning.html" class="internal-link" target="_self" rel="noopener nofollow">Critical path method</a> is used to estimate the minimum project duration.<br>
+Given a project schedule network diagram and an estimation of activities<br>
+duration, calculate the early start, early finish, late start, and late finish dates that do not delay the project finish date or any schedule constraint.</p></div></div></div></div></div><div class="el-h3 heading-wrapper"><h3 data-heading="Risk management plan" dir="auto" class="heading" id="Risk_management_plan"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Risk management plan</h3><div class="heading-children"><div class="el-p"><p dir="auto">Define a framework to identify, analyze, treat and monitor the risk constantly.</p></div><div class="el-div"><div data-callout-metadata="" data-callout-fold="" data-callout="definition" class="callout"><div class="callout-title" dir="auto"><div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"></path><path d="m15 5 4 4"></path></svg></div><div class="callout-title-inner">Definition</div></div><div class="callout-content">
+<p dir="auto"><strong>Risk</strong>: Potential problem or threat</p>
+</div></div></div><div class="el-p"><p dir="auto">Identification can be based on:</p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">Prior experience</li>
+<li data-line="1" dir="auto">Brainstorming</li>
+<li data-line="2" dir="auto">Lessons learned from similar project</li>
+<li data-line="3" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Checklists
+<ul>
+<li data-line="4" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Rule of thumb: pose each risk in the form "if <em>situation</em>, then <em>consequence</em>, for <em>stakeholder</em>".<br>
+Measures of risk are:
+<ul>
+<li data-line="6" dir="auto">Likelihood: expressed as probability</li>
+<li data-line="7" dir="auto">Impact: depends on the nature of the event</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></div><div class="el-h5 heading-wrapper"><h5 data-heading="Executing, monitoring and controlling" dir="auto" class="heading" id="Executing,_monitoring_and_controlling"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Executing, monitoring and controlling</h5><div class="heading-children"><div class="el-h6 heading-wrapper"><h6 data-heading="Execution" dir="auto" class="heading" id="Execution"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Execution</h6><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">Launch the project : kick off meeting</li>
+<li data-line="1" dir="auto">Acquire and manage project team (internal and external resources)</li>
+<li data-line="2" dir="auto">Acquire the required equipment and materials and external services</li>
+<li data-line="3" dir="auto">Perform the work identified in the schedule</li>
+<li data-line="4" dir="auto">Perform monitoring and controlling activities</li>
+</ul></div></div></div><div class="el-h6 heading-wrapper"><h6 data-heading="Monitoring" dir="auto" class="heading" id="Monitoring"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Monitoring</h6><div class="heading-children"><div class="el-p"><p dir="auto"><strong>Monitoring</strong>: consists of collecting data about where the project<br>
+stands, since projects never stick to the initial plans due to changes,<br>
+problems, etc.</p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">Gather up-to-date data</li>
+<li data-line="1" dir="auto">Update the schedule</li>
+<li data-line="2" dir="auto">Compare actual schedule with baseline schedule</li>
+<li data-line="3" dir="auto">Compare actual costs to assigned budget</li>
+</ul></div><div class="el-p"><p dir="auto">Deal with risks: In case risks become reality, follow the mitigation strategy defined in the risk management plan and revise the mitigation strategy if needed.</p></div><div class="el-p"><p dir="auto"><strong>Earned value analysis</strong><br>
+It is a methodology to assess project performance and progress. </p></div><div class="el-p"><p dir="auto">First, let's understand the basic variables:</p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> (Budget at Completion) - The total money you planned to spend on the project</li>
+<li data-line="1" dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> (Planned Value) - How much money you planned to have spent by now</li>
+<li data-line="2" dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D438 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> (Earned Value) - The value of work actually completed, based on your original budget</li>
+<li data-line="3" dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> (Actual Cost) - The real money you've spent so far</li>
+</ul></div><div class="el-p"><p dir="auto">Schedule Formulas:</p></div><div class="el-ol"><ol>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>Schedule Variance: <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D438 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></p>
+<ul>
+<li data-line="1" dir="auto">Interpretation: Shows if you're ahead or behind schedule in dollar terms</li>
+<li data-line="2" dir="auto">If positive: you're ahead of schedule</li>
+<li data-line="3" dir="auto">If negative: you're behind schedule</li>
+</ul>
+</li>
+<li data-line="5" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>Schedule Performance Index: <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43C TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D438 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2F"></mjx-c></mjx-mo></mjx-texatom><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></p>
+<ul>
+<li data-line="6" dir="auto">Interpretation: Shows how efficiently you're using time</li>
+<li data-line="7" dir="auto">If &gt; 1: you're working faster than planned</li>
+<li data-line="8" dir="auto">If &lt; 1: you're working slower than planned</li>
+<li data-line="9" dir="auto">Example: SPI of 0.8 means you're only completing 80% of the work you planned to complete</li>
+</ul>
+</li>
+</ol></div><div class="el-p"><p dir="auto">Cost Formulas:</p></div><div class="el-ol"><ol>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>Cost Variance: <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D438 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></p>
+<ul>
+<li data-line="1" dir="auto">Interpretation: Shows if you're over or under budget</li>
+<li data-line="2" dir="auto">If positive: you're under budget</li>
+<li data-line="3" dir="auto">If negative: you're over budget</li>
+</ul>
+</li>
+<li data-line="5" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>Cost Performance Index: <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43C TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D438 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2F"></mjx-c></mjx-mo></mjx-texatom><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></p>
+<ul>
+<li data-line="6" dir="auto">Interpretation: Shows how efficiently you're using money</li>
+<li data-line="7" dir="auto">If &gt; 1: you're spending less than planned</li>
+<li data-line="8" dir="auto">If &lt; 1: you're spending more than planned</li>
+<li data-line="9" dir="auto">Example: CPI of 0.9 means you're getting only 90 cents of value for each dollar spent</li>
+</ul>
+</li>
+</ol></div><div class="el-p"><p dir="auto">Estimate at Completion (EAC) Formulas:</p></div><div class="el-ol"><ol>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D438 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-texatom texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2F"></mjx-c></mjx-mo></mjx-texatom><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43C TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> (Same CPI assumption)</p>
+<ul>
+<li data-line="1" dir="auto">Interpretation: "If we keep spending money at the same efficiency rate as now, this is what the final cost will be"</li>
+<li data-line="2" dir="auto">Uses past cost performance to predict future costs</li>
+</ul>
+</li>
+<li data-line="4" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D438 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D438 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math></mjx-container></span> (Baseline rate assumption)</p>
+<ul>
+<li data-line="5" dir="auto">Interpretation: "If we forget our past performance and spend exactly as originally budgeted for the remaining work"</li>
+<li data-line="6" dir="auto">More optimistic approach, assumes past problems won't affect future work</li>
+</ul>
+</li>
+<li data-line="8" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D438 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mfrac space="4"><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D438 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mrow size="s"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43C TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2217"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43C TEX-I"></mjx-c></mjx-mi></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac></mjx-math></mjx-container></span> (Same CPI and SPI assumption)</p>
+<ul>
+<li data-line="9" dir="auto">Interpretation: "If both our time and cost efficiency stay the same as they are now"</li>
+<li data-line="10" dir="auto">Most comprehensive as it considers both schedule and cost performance</li>
+<li data-line="11" dir="auto">Usually gives the most pessimistic (but often realistic) estimate</li>
+</ul>
+</li>
+</ol></div></div></div><div class="el-h6 heading-wrapper"><h6 data-heading="Controlling" dir="auto" class="heading" id="Controlling"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Controlling</h6><div class="heading-children"><div class="el-p"><p dir="auto"><strong>Controlling</strong> is where you implement corrections to get your project<br>
+back on track. It means balancing scope, time, cost, resources and quality.</p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">If schedule is important --&gt; <strong>fast-tracking</strong> and <strong>crashing</strong></li>
+<li data-line="1" dir="auto">If money is a priority --&gt; reduce resources or overhead costs</li>
+<li data-line="2" dir="auto">If schedule, money, resources are non negotiable --&gt; reduce scope eliminating tasks associated with it</li>
+</ul></div><div class="el-p"><p dir="auto"><strong>Fast tracking</strong>: push tasks to start earlier than they would by introducing a<br>
+negative lag time, if needed.</p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">This can be done only if the considered tasks can actually be parallelized.</li>
+<li data-line="1" dir="auto">No cost increase but higher risk.</li>
+</ul></div><div class="el-p"><p dir="auto"><span alt="Pasted image 20250121121525.png" src="Pasted image 20250121121525.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20250121121525.png" src="università/master-first-semester/software-engineering-2/pasted-image-20250121121525.png"></span></p></div><div class="el-p"><p dir="auto"><strong>Crashing</strong>: shorted the tasks on the critical path by adding new resources. </p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">Feasible if addition of resources is actually beneficial</li>
+<li data-line="1" dir="auto">It implies a cost increase.</li>
+</ul></div></div></div></div></div></div></div><div class="el-h3 heading-wrapper"><h3 data-heading="Effort and Cost Estimation" dir="auto" class="heading" id="Effort_and_Cost_Estimation"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Effort and Cost Estimation</h3><div class="heading-children"><div class="el-h4 heading-wrapper"><h4 data-heading="Estimation techniques" dir="auto" class="heading" id="Estimation_techniques"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Estimation techniques</h4><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto"><strong>Experience based techniques</strong>: The estimate of future effort requirements is based on the manager’s experience of past projects and the application domain</li>
+<li data-line="1" dir="auto"><strong>Algorithmic cost modelling</strong>: a formulaic approach is used to compute the project effort based on estimates of product attributes, such as size, and process characteristics, such as experience of staff involved <span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" display="true"><mjx-math display="true" class="MJX-TEX" style="margin-left: 0px; margin-right: 0px;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D438 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2217"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D467 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2217"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2217"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>where:</li>
+<li data-line="3" dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>: is an organisation-dependent constant</li>
+<li data-line="4" dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D467 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>: is a measure of the “quantity” of product</li>
+<li data-line="5" dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>: reflects the disproportionate effort for large projects and</li>
+<li data-line="6" dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>: is a multiplier reflecting product, process and people attributes</li>
+</ul></div><div class="el-h5 heading-wrapper"><h5 data-heading="Dimensional and functional metrics: LOC and FP" dir="auto" class="heading" id="Dimensional_and_functional_metrics:_LOC_and_FP"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Dimensional and functional metrics: LOC and FP</h5><div class="heading-children"><div class="el-p"><p dir="auto">From the product model, one can estimate the size of the software and derive the following metrics: FP (function point), LOC (lines of code).</p></div><div class="el-p"><p dir="auto"><strong>Estimate software size</strong></p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Option 1:
+<ul>
+<li data-line="1" dir="auto">From the RASD or other informal preliminary documents, identify the main characteristics of the software to be and classify them in terms of <strong>Function Points</strong></li>
+<li data-line="2" dir="auto">From the number of Function Points determine the software LOC estimation</li>
+</ul>
+</li>
+<li data-line="3" dir="auto">Option 2: Estimate LOC directly, based on previous experience/projects.</li>
+</ul></div></div></div><div class="el-h5 heading-wrapper"><h5 data-heading="Function Points" dir="auto" class="heading" id="Function_Points"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Function Points</h5><div class="heading-children"><div class="el-p"><p dir="auto">Basic assumption: the size of software can be characterized based on the "functions" that it has to offer.</p></div><div class="el-p"><p dir="auto">Based on a combination of program characteristics, function points can vary, in the proposed method the identified functions are:</p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto"><strong>Internal Logic File (ILF)</strong>: homogeneous set of data used and managed by the application</li>
+<li data-line="1" dir="auto"><strong>External Interface File (EIF)</strong>: homogeneous set of data used by the application but generated and maintained by other applications</li>
+<li data-line="2" dir="auto"><strong>External Input</strong>: Elementary operation to elaborate data coming from the external environment</li>
+<li data-line="3" dir="auto"><strong>External Output</strong>: Elementary operation that generates data for the external environment</li>
+<li data-line="4" dir="auto"><strong>External Inquir</strong>y: Elementary operation that involves input and output (without significant elaboration of data from logic files)</li>
+</ul></div><div class="el-p"><p dir="auto">A weight is associated with each of these FP counts (by taking into account the complexity of the FP), then the toal is computed as follows:<br>
+<span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" display="true"><mjx-math display="true" class="MJX-TEX" style="margin-left: 0px; margin-right: 0px;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D439 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mo class="mjx-lop" space="4"><mjx-c class="mjx-c2211 TEX-S2"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D462 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D459 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D454 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D463 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2217"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D466 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D464 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D454 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c210E TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span></p></div><div class="el-p"><p dir="auto">FPs can be used to estimate LOC depending on the average number of<br>
+LOC per FP for a given language:<br>
+<span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" display="true"><mjx-math display="true" class="MJX-TEX" style="margin-left: 0px; margin-right: 0px;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2217"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D462 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D453 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D462 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45D TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span>where:</p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto"><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D449 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi></mjx-math></mjx-container></span> is a language-dependent factor.</li>
+</ul></div><div class="mod-footer mod-ui"></div></div></div></div></div></div></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder">
+		<div class="graph-view-container">
+			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+			<canvas id="graph-canvas" class="hide" width="512px" height="512px"></canvas>
+		</div>
+		</div></div><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="università/master-first-semester/software-engineering-2/project-management.html#Project management"><div class="tree-item-contents heading-link" heading-name="Project management"><span class="tree-item-title">Project management</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-link" href="università/master-first-semester/software-engineering-2/project-management.html#Planning"><div class="tree-item-contents heading-link" heading-name="Planning"><div class="collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="tree-item-title">Planning</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item mod-collapsible" data-depth="3"><a class="tree-link" href="università/master-first-semester/software-engineering-2/project-management.html#Project_scheduling"><div class="tree-item-contents heading-link" heading-name="Project scheduling"><div class="collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="tree-item-title">Project scheduling</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="4"><a class="tree-link" href="università/master-first-semester/software-engineering-2/project-management.html#Terminology"><div class="tree-item-contents heading-link" heading-name="Terminology"><span class="tree-item-title">Terminology</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div><div class="tree-item mod-collapsible" data-depth="3"><a class="tree-link" href="università/master-first-semester/software-engineering-2/project-management.html#Illustrating_project_schedule"><div class="tree-item-contents heading-link" heading-name="Illustrating project schedule"><div class="collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="tree-item-title">Illustrating project schedule</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="5"><a class="tree-link" href="università/master-first-semester/software-engineering-2/project-management.html#Work_Breakdown_Structure_(WBS)"><div class="tree-item-contents heading-link" heading-name="Work Breakdown Structure (WBS)"><span class="tree-item-title">Work Breakdown Structure (WBS)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="università/master-first-semester/software-engineering-2/project-management.html#Precedence_Diagram_Method_(PDM)"><div class="tree-item-contents heading-link" heading-name="Precedence Diagram Method (PDM)"><span class="tree-item-title">Precedence Diagram Method (PDM)</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="università/master-first-semester/software-engineering-2/project-management.html#Critical_Path_Method_(CPM)"><div class="tree-item-contents heading-link" heading-name="Critical Path Method (CPM)"><span class="tree-item-title">Critical Path Method (CPM)</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div><div class="tree-item mod-collapsible" data-depth="3"><a class="tree-link" href="università/master-first-semester/software-engineering-2/project-management.html#Risk_management_plan"><div class="tree-item-contents heading-link" heading-name="Risk management plan"><div class="collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="tree-item-title">Risk management plan</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="5"><a class="tree-link" href="università/master-first-semester/software-engineering-2/project-management.html#Executing,_monitoring_and_controlling"><div class="tree-item-contents heading-link" heading-name="Executing, monitoring and controlling"><span class="tree-item-title">Executing, monitoring and controlling</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="6"><a class="tree-link" href="università/master-first-semester/software-engineering-2/project-management.html#Execution"><div class="tree-item-contents heading-link" heading-name="Execution"><span class="tree-item-title">Execution</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="6"><a class="tree-link" href="università/master-first-semester/software-engineering-2/project-management.html#Monitoring"><div class="tree-item-contents heading-link" heading-name="Monitoring"><span class="tree-item-title">Monitoring</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="6"><a class="tree-link" href="università/master-first-semester/software-engineering-2/project-management.html#Controlling"><div class="tree-item-contents heading-link" heading-name="Controlling"><span class="tree-item-title">Controlling</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div><div class="tree-item mod-collapsible" data-depth="3"><a class="tree-link" href="università/master-first-semester/software-engineering-2/project-management.html#Effort_and_Cost_Estimation"><div class="tree-item-contents heading-link" heading-name="Effort and Cost Estimation"><div class="collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="tree-item-title">Effort and Cost Estimation</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item mod-collapsible" data-depth="4"><a class="tree-link" href="università/master-first-semester/software-engineering-2/project-management.html#Estimation_techniques"><div class="tree-item-contents heading-link" heading-name="Estimation techniques"><div class="collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="tree-item-title">Estimation techniques</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="5"><a class="tree-link" href="università/master-first-semester/software-engineering-2/project-management.html#Dimensional_and_functional_metrics:_LOC_and_FP"><div class="tree-item-contents heading-link" heading-name="Dimensional and functional metrics: LOC and FP"><span class="tree-item-title">Dimensional and functional metrics: LOC and FP</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="5"><a class="tree-link" href="università/master-first-semester/software-engineering-2/project-management.html#Function_Points"><div class="tree-item-contents heading-link" heading-name="Function Points"><span class="tree-item-title">Function Points</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div></div></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>

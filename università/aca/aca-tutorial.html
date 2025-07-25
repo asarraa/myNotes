@@ -1,0 +1,342 @@
+<!DOCTYPE html> <html><head>
+		<title>ACA tutorial</title>
+		<base href="../../">
+		<meta id="root-path" root-path="../../">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimum-scale=1.0, maximum-scale=5.0">
+		<meta charset="UTF-8">
+		<meta name="description" content="Vault - ACA tutorial">
+		<meta property="og:title" content="ACA tutorial">
+		<meta property="og:description" content="Vault - ACA tutorial">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="università/aca/aca-tutorial.html">
+		<meta property="og:image" content="lib/media/pasted-image-20250624162830.png">
+		<meta property="og:site_name" content="Vault">
+		<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="lib/rss.xml"><script async="" id="webpage-script" src="lib/scripts/webpage.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script type="module" async="" id="graph-view-script" src="lib/scripts/graph-view.js"></script><script async="" id="graph-wasm-script" src="lib/scripts/graph-wasm.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="graph-render-worker-script" src="lib/scripts/graph-render-worker.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="tinycolor-script" src="lib/scripts/tinycolor.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="pixi-script" src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.4.0/pixi.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><script async="" id="minisearch-script" src="https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><link rel="icon" href="lib/media/favicon.png"><script async="" id="graph-data-script" src="lib/scripts/graph-data.js" onload="this.onload=null;this.setAttribute(&quot;loaded&quot;, &quot;true&quot;)"></script><style>body{--line-width:40em;--line-width-adaptive:40em;--file-line-width:40em;--sidebar-width:min(20em, 80vw);--collapse-arrow-size:11px;--tree-horizontal-spacing:0.6em;--tree-vertical-spacing:0.6em;--sidebar-margin:12px}.sidebar{height:100%;min-width:calc(var(--sidebar-width) + var(--divider-width-hover));max-width:calc(var(--sidebar-width) + var(--divider-width-hover));font-size:14px;z-index:10;position:relative;overflow:hidden;transition:min-width ease-in-out,max-width ease-in-out;transition-duration:.2s;contain:size}.sidebar-left{left:0}.sidebar-right{right:0}.sidebar.is-collapsed{min-width:0;max-width:0}body.floating-sidebars .sidebar{position:absolute}.sidebar-content{height:100%;min-width:calc(var(--sidebar-width) - var(--divider-width-hover));top:0;padding:var(--sidebar-margin);padding-top:4em;line-height:var(--line-height-tight);background-color:var(--background-secondary);transition:background-color,border-right,border-left,box-shadow;transition-duration:var(--color-fade-speed);transition-timing-function:ease-in-out;position:absolute;display:flex;flex-direction:column}.sidebar:not(.is-collapsed) .sidebar-content{min-width:calc(max(100%,var(--sidebar-width)) - 3px);max-width:calc(max(100%,var(--sidebar-width)) - 3px)}.sidebar-left .sidebar-content{left:0;border-top-right-radius:var(--radius-l);border-bottom-right-radius:var(--radius-l)}.sidebar-right .sidebar-content{right:0;border-top-left-radius:var(--radius-l);border-bottom-left-radius:var(--radius-l)}.sidebar:has(.sidebar-content:empty):has(.topbar-content:empty){display:none}.sidebar-topbar{height:2em;width:var(--sidebar-width);top:var(--sidebar-margin);padding-inline:var(--sidebar-margin);z-index:1;position:fixed;display:flex;align-items:center;transition:width ease-in-out;transition-duration:inherit}.sidebar.is-collapsed .sidebar-topbar{width:calc(2.3em + var(--sidebar-margin) * 2)}.sidebar .sidebar-topbar.is-collapsed{width:0}.sidebar-left .sidebar-topbar{left:0}.sidebar-right .sidebar-topbar{right:0}.topbar-content{overflow:hidden;overflow:clip;width:100%;height:100%;display:flex;align-items:center;transition:inherit}.sidebar.is-collapsed .topbar-content{width:0;transition:inherit}.clickable-icon.sidebar-collapse-icon{background-color:transparent;color:var(--icon-color-focused);padding:0!important;margin:0!important;height:100%!important;width:2.3em!important;margin-inline:0.14em!important;position:absolute}.sidebar-left .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);right:var(--sidebar-margin)}.sidebar-right .clickable-icon.sidebar-collapse-icon{transform:rotateY(180deg);left:var(--sidebar-margin)}.clickable-icon.sidebar-collapse-icon svg.svg-icon{width:100%;height:100%}.sidebar-section-header{margin:0 0 1em 0;text-transform:uppercase;letter-spacing:.06em;font-weight:600}body{transition:background-color var(--color-fade-speed) ease-in-out}.webpage-container{display:flex;flex-direction:row;height:100%;width:100%;align-items:stretch;justify-content:center}.document-container{opacity:1;flex-basis:100%;max-width:100%;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;transition:opacity .2s ease-in-out;contain:inline-size}.hide{opacity:0;transition:opacity .2s ease-in-out}.document-container>.markdown-preview-view{margin:var(--sidebar-margin);margin-bottom:0;width:100%;width:-webkit-fill-available;width:-moz-available;width:fill-available;background-color:var(--background-primary);transition:background-color var(--color-fade-speed) ease-in-out;border-top-right-radius:var(--window-radius,var(--radius-m));border-top-left-radius:var(--window-radius,var(--radius-m));overflow-x:hidden!important;overflow-y:auto!important;display:flex!important;flex-direction:column!important;align-items:center!important;contain:inline-size}.document-container>.markdown-preview-view>.markdown-preview-sizer{padding-bottom:80vh!important;width:100%!important;max-width:var(--line-width)!important;flex-basis:var(--line-width)!important;transition:background-color var(--color-fade-speed) ease-in-out;contain:inline-size}.markdown-rendered img:not([width]),.view-content img:not([width]){max-width:100%;outline:0}.document-container>.view-content.embed{display:flex;padding:1em;height:100%;width:100%;align-items:center;justify-content:center}.document-container>.view-content.embed>*{max-width:100%;max-height:100%;object-fit:contain}:has(> :is(.math,table)){overflow-x:auto!important}.document-container>.view-content{overflow-x:auto;contain:content;padding:0;margin:0;height:100%}.scroll-highlight{position:absolute;width:100%;height:100%;pointer-events:none;z-index:1000;background-color:hsla(var(--color-accent-hsl),.25);opacity:0;padding:1em;inset:50%;translate:-50% -50%;border-radius:var(--radius-s)}</style><script defer="">async function loadIncludes(){if("file:"!=location.protocol){let e=document.querySelectorAll("include");for(let t=0;t<e.length;t++){let o=e[t],l=o.getAttribute("src");try{const e=await fetch(l);if(!e.ok){console.log("Could not include file: "+l),o?.remove();continue}let t=await e.text(),n=document.createRange().createContextualFragment(t),i=Array.from(n.children);for(let e of i)e.classList.add("hide"),e.style.transition="opacity 0.5s ease-in-out",setTimeout((()=>{e.classList.remove("hide")}),10);o.before(n),o.remove(),console.log("Included file: "+l)}catch(e){o?.remove(),console.log("Could not include file: "+l,e);continue}}}else{if(document.querySelectorAll("include").length>0){var e=document.createElement("div");e.id="error",e.textContent="Web server exports must be hosted on an http / web server to be viewed correctly.",e.style.position="fixed",e.style.top="50%",e.style.left="50%",e.style.transform="translate(-50%, -50%)",e.style.fontSize="1.5em",e.style.fontWeight="bold",e.style.textAlign="center",document.body.appendChild(e),document.querySelector(".document-container")?.classList.remove("hide")}}}document.addEventListener("DOMContentLoaded",(()=>{loadIncludes()}));let isFileProtocol="file:"==location.protocol;function waitLoadScripts(e,t){let o=e.map((e=>document.getElementById(e+"-script"))),l=0;!function e(){let n=o[l];l++,n&&"true"!=n.getAttribute("loaded")||l<o.length&&e(),l<o.length?n.addEventListener("load",e):t()}()}</script><link rel="stylesheet" href="lib/styles/obsidian.css"><link rel="preload" href="lib/styles/global-variable-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/global-variable-styles.css"></noscript><link rel="preload" href="lib/styles/main-styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="lib/styles/main-styles.css"></noscript></head><body class="publish css-settings-manager theme-light show-inline-title show-ribbon"><script defer="">let theme=localStorage.getItem("theme")||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");"dark"==theme?(document.body.classList.add("theme-dark"),document.body.classList.remove("theme-light")):(document.body.classList.add("theme-light"),document.body.classList.remove("theme-dark")),window.innerWidth<480?document.body.classList.add("is-phone"):window.innerWidth<768?document.body.classList.add("is-tablet"):window.innerWidth<1024?document.body.classList.add("is-small-screen"):document.body.classList.add("is-large-screen")</script><div class="webpage-container workspace"><div class="sidebar-left sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"><label class="theme-toggle-container" for="theme_toggle"><input class="theme-toggle-input" type="checkbox" id="theme_toggle"><div class="toggle-background"></div></label></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="search-input-container"><input enterkeyhint="search" type="search" spellcheck="false" placeholder="Search..."><div class="search-input-clear-button" aria-label="Clear search"></div></div><include src="lib/html/file-tree.html"></include></div><script defer="">let ls = document.querySelector(".sidebar-left"); ls.classList.add("is-collapsed"); if (window.innerWidth > 768) ls.classList.remove("is-collapsed"); ls.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-left-width"));</script></div><div class="document-container markdown-reading-view hide"><div class="markdown-preview-view markdown-rendered allow-fold-headings allow-fold-lists is-readable-line-width"><style id="MJX-CHTML-styles">mjx-c.mjx-c1D43C.TEX-I::before { padding: 0.683em 0.504em 0px 0px; content: "I"; }
+mjx-c.mjx-c1D436.TEX-I::before { padding: 0.705em 0.76em 0.022em 0px; content: "C"; }
+mjx-c.mjx-c1D443.TEX-I::before { padding: 0.683em 0.751em 0px 0px; content: "P"; }
+mjx-c.mjx-c23::before { padding: 0.694em 0.833em 0.194em 0px; content: "#"; }
+mjx-c.mjx-c6B::before { padding: 0.694em 0.528em 0px 0px; content: "k"; }
+mjx-c.mjx-c79::before { padding: 0.431em 0.528em 0.204em 0px; content: "y"; }
+mjx-c.mjx-c1D440.TEX-I::before { padding: 0.683em 1.051em 0px 0px; content: "M"; }
+mjx-c.mjx-c71::before { padding: 0.442em 0.528em 0.194em 0px; content: "q"; }
+mjx-c.mjx-c36::before { padding: 0.666em 0.5em 0.022em 0px; content: "6"; }
+mjx-c.mjx-c1D445.TEX-I::before { padding: 0.683em 0.759em 0.021em 0px; content: "R"; }
+mjx-c.mjx-c1D444.TEX-I::before { padding: 0.704em 0.791em 0.194em 0px; content: "Q"; }
+mjx-c.mjx-c1D457.TEX-I::before { padding: 0.661em 0.412em 0.204em 0px; content: "j"; }
+mjx-c.mjx-c50::before { padding: 0.683em 0.681em 0px 0px; content: "P"; }
+mjx-c.mjx-c43::before { padding: 0.705em 0.722em 0.021em 0px; content: "C"; }
+mjx-c.mjx-c49::before { padding: 0.683em 0.361em 0px 0px; content: "I"; }
+mjx-c.mjx-c44::before { padding: 0.683em 0.764em 0px 0px; content: "D"; }
+mjx-c.mjx-c7A::before { padding: 0.431em 0.444em 0px 0px; content: "z"; }
+mjx-c.mjx-c1D450.TEX-I::before { padding: 0.442em 0.433em 0.011em 0px; content: "c"; }
+mjx-c.mjx-c1D45C.TEX-I::before { padding: 0.441em 0.485em 0.011em 0px; content: "o"; }
+mjx-c.mjx-c1D462.TEX-I::before { padding: 0.442em 0.572em 0.011em 0px; content: "u"; }
+mjx-c.mjx-c1D452.TEX-I::before { padding: 0.442em 0.466em 0.011em 0px; content: "e"; }
+mjx-c.mjx-c1D45F.TEX-I::before { padding: 0.442em 0.451em 0.011em 0px; content: "r"; }
+mjx-c.mjx-c2265::before { padding: 0.636em 0.778em 0.138em 0px; content: "≥"; }
+mjx-c.mjx-cD7::before { padding: 0.491em 0.778em 0px 0px; content: "×"; }
+mjx-c.mjx-c2C::before { padding: 0.121em 0.278em 0.194em 0px; content: ","; }
+mjx-mfrac { display: inline-block; text-align: left; }
+mjx-frac { display: inline-block; vertical-align: 0.17em; padding: 0px 0.22em; }
+mjx-frac[type="d"] { vertical-align: 0.04em; }
+mjx-frac[delims] { padding: 0px 0.1em; }
+mjx-frac[atop] { padding: 0px 0.12em; }
+mjx-frac[atop][delims] { padding: 0px; }
+mjx-dtable { display: inline-table; width: 100%; }
+mjx-dtable > * { font-size: 2000%; }
+mjx-dbox { display: block; font-size: 5%; }
+mjx-num { display: block; text-align: center; }
+mjx-den { display: block; text-align: center; }
+mjx-mfrac[bevelled] > mjx-num { display: inline-block; }
+mjx-mfrac[bevelled] > mjx-den { display: inline-block; }
+mjx-den[align="right"], mjx-num[align="right"] { text-align: right; }
+mjx-den[align="left"], mjx-num[align="left"] { text-align: left; }
+mjx-nstrut { display: inline-block; height: 0.054em; width: 0px; vertical-align: -0.054em; }
+mjx-nstrut[type="d"] { height: 0.217em; vertical-align: -0.217em; }
+mjx-dstrut { display: inline-block; height: 0.505em; width: 0px; }
+mjx-dstrut[type="d"] { height: 0.726em; }
+mjx-line { display: block; box-sizing: border-box; min-height: 1px; height: 0.06em; border-top: 0.06em solid; margin: 0.06em -0.1em; overflow: hidden; }
+mjx-line[type="d"] { margin: 0.18em -0.1em; }
+mjx-mrow { display: inline-block; text-align: left; }
+mjx-c.mjx-c53::before { padding: 0.705em 0.556em 0.022em 0px; content: "S"; }
+mjx-c.mjx-c64::before { padding: 0.694em 0.556em 0.011em 0px; content: "d"; }
+mjx-c.mjx-c75::before { padding: 0.442em 0.556em 0.011em 0px; content: "u"; }
+mjx-c.mjx-c76::before { padding: 0.431em 0.528em 0.011em 0px; content: "v"; }
+mjx-c.mjx-c45::before { padding: 0.68em 0.681em 0px 0px; content: "E"; }
+mjx-c.mjx-c78::before { padding: 0.431em 0.528em 0px 0px; content: "x"; }
+mjx-c.mjx-c77::before { padding: 0.431em 0.722em 0.011em 0px; content: "w"; }
+mjx-c.mjx-c46::before { padding: 0.68em 0.653em 0px 0px; content: "F"; }
+mjx-msub { display: inline-block; text-align: left; }
+mjx-msup { display: inline-block; text-align: left; }
+mjx-munderover { display: inline-block; text-align: left; }
+mjx-munderover:not([limits="false"]) { padding-top: 0.1em; }
+mjx-munderover:not([limits="false"]) > * { display: block; }
+mjx-msubsup { display: inline-block; text-align: left; }
+mjx-script { display: inline-block; padding-right: 0.05em; padding-left: 0.033em; }
+mjx-script > mjx-spacer { display: block; }
+mjx-texatom { display: inline-block; text-align: left; }
+mjx-mtext { display: inline-block; text-align: left; }
+mjx-mn { display: inline-block; text-align: left; }
+mjx-c.mjx-c1D44A.TEX-I::before { padding: 0.683em 1.048em 0.022em 0px; content: "W"; }
+mjx-c.mjx-c28::before { padding: 0.75em 0.389em 0.25em 0px; content: "("; }
+mjx-c.mjx-c1D467.TEX-I::before { padding: 0.442em 0.465em 0.011em 0px; content: "z"; }
+mjx-c.mjx-c29::before { padding: 0.75em 0.389em 0.25em 0px; content: ")"; }
+mjx-c.mjx-c1D437.TEX-I::before { padding: 0.683em 0.828em 0px 0px; content: "D"; }
+mjx-c.mjx-c1D44F.TEX-I::before { padding: 0.694em 0.429em 0.011em 0px; content: "b"; }
+mjx-c.mjx-c1D456.TEX-I::before { padding: 0.661em 0.345em 0.011em 0px; content: "i"; }
+mjx-c.mjx-c1D45B.TEX-I::before { padding: 0.442em 0.6em 0.011em 0px; content: "n"; }
+mjx-c.mjx-c2211.TEX-S1::before { padding: 0.75em 1.056em 0.25em 0px; content: "∑"; }
+mjx-c.mjx-c69::before { padding: 0.669em 0.278em 0px 0px; content: "i"; }
+mjx-c.mjx-c6E::before { padding: 0.442em 0.556em 0px 0px; content: "n"; }
+mjx-c.mjx-c66::before { padding: 0.705em 0.372em 0px 0px; content: "f"; }
+mjx-c.mjx-c1D461.TEX-I::before { padding: 0.626em 0.361em 0.011em 0px; content: "t"; }
+mjx-c.mjx-c3D::before { padding: 0.583em 0.778em 0.082em 0px; content: "="; }
+mjx-c.mjx-c73::before { padding: 0.448em 0.394em 0.011em 0px; content: "s"; }
+mjx-c.mjx-c6D::before { padding: 0.442em 0.833em 0px 0px; content: "m"; }
+mjx-c.mjx-c74::before { padding: 0.615em 0.389em 0.01em 0px; content: "t"; }
+mjx-c.mjx-c68::before { padding: 0.694em 0.556em 0px 0px; content: "h"; }
+mjx-c.mjx-c20::before { padding: 0px 0.25em 0px 0px; content: " "; }
+mjx-c.mjx-c2B::before { padding: 0.583em 0.778em 0.082em 0px; content: "+"; }
+mjx-c.mjx-c6F::before { padding: 0.448em 0.5em 0.01em 0px; content: "o"; }
+mjx-c.mjx-c65::before { padding: 0.448em 0.444em 0.011em 0px; content: "e"; }
+mjx-c.mjx-c72::before { padding: 0.442em 0.392em 0px 0px; content: "r"; }
+mjx-c.mjx-c70::before { padding: 0.442em 0.556em 0.194em 0px; content: "p"; }
+mjx-c.mjx-c62::before { padding: 0.694em 0.556em 0.011em 0px; content: "b"; }
+mjx-c.mjx-c6C::before { padding: 0.694em 0.278em 0px 0px; content: "l"; }
+mjx-c.mjx-c63::before { padding: 0.448em 0.444em 0.011em 0px; content: "c"; }
+mjx-c.mjx-c61::before { padding: 0.448em 0.5em 0.011em 0px; content: "a"; }
+mjx-c.mjx-c1D714.TEX-I::before { padding: 0.443em 0.622em 0.011em 0px; content: "ω"; }
+mjx-c.mjx-c2217::before { padding: 0.465em 0.5em 0px 0px; content: "∗"; }
+mjx-c.mjx-c32::before { padding: 0.666em 0.5em 0px 0px; content: "2"; }
+mjx-c.mjx-c1D458.TEX-I::before { padding: 0.694em 0.521em 0.011em 0px; content: "k"; }
+mjx-c.mjx-c30::before { padding: 0.666em 0.5em 0.022em 0px; content: "0"; }
+mjx-c.mjx-c1D460.TEX-I::before { padding: 0.442em 0.469em 0.01em 0px; content: "s"; }
+mjx-c.mjx-c1D45A.TEX-I::before { padding: 0.442em 0.878em 0.011em 0px; content: "m"; }
+mjx-c.mjx-c210E.TEX-I::before { padding: 0.694em 0.576em 0.011em 0px; content: "h"; }
+mjx-c.mjx-c31::before { padding: 0.666em 0.5em 0px 0px; content: "1"; }
+mjx-c.mjx-c1D449.TEX-I::before { padding: 0.683em 0.769em 0.022em 0px; content: "V"; }
+mjx-container[jax="CHTML"] { line-height: 0; }
+mjx-container [space="1"] { margin-left: 0.111em; }
+mjx-container [space="2"] { margin-left: 0.167em; }
+mjx-container [space="3"] { margin-left: 0.222em; }
+mjx-container [space="4"] { margin-left: 0.278em; }
+mjx-container [space="5"] { margin-left: 0.333em; }
+mjx-container [rspace="1"] { margin-right: 0.111em; }
+mjx-container [rspace="2"] { margin-right: 0.167em; }
+mjx-container [rspace="3"] { margin-right: 0.222em; }
+mjx-container [rspace="4"] { margin-right: 0.278em; }
+mjx-container [rspace="5"] { margin-right: 0.333em; }
+mjx-container [size="s"] { font-size: 70.7%; }
+mjx-container [size="ss"] { font-size: 50%; }
+mjx-container [size="Tn"] { font-size: 60%; }
+mjx-container [size="sm"] { font-size: 85%; }
+mjx-container [size="lg"] { font-size: 120%; }
+mjx-container [size="Lg"] { font-size: 144%; }
+mjx-container [size="LG"] { font-size: 173%; }
+mjx-container [size="hg"] { font-size: 207%; }
+mjx-container [size="HG"] { font-size: 249%; }
+mjx-container [width="full"] { width: 100%; }
+mjx-box { display: inline-block; }
+mjx-block { display: block; }
+mjx-itable { display: inline-table; }
+mjx-row { display: table-row; }
+mjx-row > * { display: table-cell; }
+mjx-mtext { display: inline-block; }
+mjx-mstyle { display: inline-block; }
+mjx-merror { display: inline-block; color: red; background-color: yellow; }
+mjx-mphantom { visibility: hidden; }
+mjx-assistive-mml { top: 0px; left: 0px; clip: rect(1px, 1px, 1px, 1px); user-select: none; position: absolute !important; padding: 1px 0px 0px !important; border: 0px !important; display: block !important; width: auto !important; overflow: hidden !important; }
+mjx-assistive-mml[display="block"] { width: 100% !important; }
+mjx-math { display: inline-block; text-align: left; line-height: 0; text-indent: 0px; font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; letter-spacing: normal; border-collapse: collapse; overflow-wrap: normal; word-spacing: normal; white-space: nowrap; direction: ltr; padding: 1px 0px; }
+mjx-container[jax="CHTML"][display="true"] { display: block; text-align: center; margin: 1em 0px; }
+mjx-container[jax="CHTML"][display="true"][width="full"] { display: flex; }
+mjx-container[jax="CHTML"][display="true"] mjx-math { padding: 0px; }
+mjx-container[jax="CHTML"][justify="left"] { text-align: left; }
+mjx-container[jax="CHTML"][justify="right"] { text-align: right; }
+mjx-mi { display: inline-block; text-align: left; }
+mjx-c { display: inline-block; }
+mjx-utext { display: inline-block; padding: 0.75em 0px 0.2em; }
+mjx-mo { display: inline-block; text-align: left; }
+mjx-stretchy-h { display: inline-table; width: 100%; }
+mjx-stretchy-h > * { display: table-cell; width: 0px; }
+mjx-stretchy-h > * > mjx-c { display: inline-block; transform: scaleX(1); }
+mjx-stretchy-h > * > mjx-c::before { display: inline-block; width: initial; }
+mjx-stretchy-h > mjx-ext { overflow: clip visible; width: 100%; }
+mjx-stretchy-h > mjx-ext > mjx-c::before { transform: scaleX(500); }
+mjx-stretchy-h > mjx-ext > mjx-c { width: 0px; }
+mjx-stretchy-h > mjx-beg > mjx-c { margin-right: -0.1em; }
+mjx-stretchy-h > mjx-end > mjx-c { margin-left: -0.1em; }
+mjx-stretchy-v { display: inline-block; }
+mjx-stretchy-v > * { display: block; }
+mjx-stretchy-v > mjx-beg { height: 0px; }
+mjx-stretchy-v > mjx-end > mjx-c { display: block; }
+mjx-stretchy-v > * > mjx-c { transform: scaleY(1); transform-origin: left center; overflow: hidden; }
+mjx-stretchy-v > mjx-ext { display: block; height: 100%; box-sizing: border-box; border: 0px solid transparent; overflow: visible clip; }
+mjx-stretchy-v > mjx-ext > mjx-c::before { width: initial; box-sizing: border-box; }
+mjx-stretchy-v > mjx-ext > mjx-c { transform: scaleY(500) translateY(0.075em); overflow: visible; }
+mjx-mark { display: inline-block; height: 0px; }
+mjx-c::before { display: block; width: 0px; }
+.MJX-TEX { font-family: MJXZERO, MJXTEX; }
+.TEX-B { font-family: MJXZERO, MJXTEX-B; }
+.TEX-I { font-family: MJXZERO, MJXTEX-I; }
+.TEX-MI { font-family: MJXZERO, MJXTEX-MI; }
+.TEX-BI { font-family: MJXZERO, MJXTEX-BI; }
+.TEX-S1 { font-family: MJXZERO, MJXTEX-S1; }
+.TEX-S2 { font-family: MJXZERO, MJXTEX-S2; }
+.TEX-S3 { font-family: MJXZERO, MJXTEX-S3; }
+.TEX-S4 { font-family: MJXZERO, MJXTEX-S4; }
+.TEX-A { font-family: MJXZERO, MJXTEX-A; }
+.TEX-C { font-family: MJXZERO, MJXTEX-C; }
+.TEX-CB { font-family: MJXZERO, MJXTEX-CB; }
+.TEX-FR { font-family: MJXZERO, MJXTEX-FR; }
+.TEX-FRB { font-family: MJXZERO, MJXTEX-FRB; }
+.TEX-SS { font-family: MJXZERO, MJXTEX-SS; }
+.TEX-SSB { font-family: MJXZERO, MJXTEX-SSB; }
+.TEX-SSI { font-family: MJXZERO, MJXTEX-SSI; }
+.TEX-SC { font-family: MJXZERO, MJXTEX-SC; }
+.TEX-T { font-family: MJXZERO, MJXTEX-T; }
+.TEX-V { font-family: MJXZERO, MJXTEX-V; }
+.TEX-VB { font-family: MJXZERO, MJXTEX-VB; }
+mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c { font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A !important; }
+@font-face { font-family: MJXZERO; src: url("lib/fonts/mathjax_zero.woff") format("woff"); }
+@font-face { font-family: MJXTEX; src: url("lib/fonts/mathjax_main-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-B; src: url("lib/fonts/mathjax_main-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-I; src: url("lib/fonts/mathjax_math-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-MI; src: url("lib/fonts/mathjax_main-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-BI; src: url("lib/fonts/mathjax_math-bolditalic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S1; src: url("lib/fonts/mathjax_size1-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S2; src: url("lib/fonts/mathjax_size2-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S3; src: url("lib/fonts/mathjax_size3-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-S4; src: url("lib/fonts/mathjax_size4-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-A; src: url("lib/fonts/mathjax_ams-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-C; src: url("lib/fonts/mathjax_calligraphic-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-CB; src: url("lib/fonts/mathjax_calligraphic-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-FR; src: url("lib/fonts/mathjax_fraktur-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-FRB; src: url("lib/fonts/mathjax_fraktur-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SS; src: url("lib/fonts/mathjax_sansserif-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SSB; src: url("lib/fonts/mathjax_sansserif-bold.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SSI; src: url("lib/fonts/mathjax_sansserif-italic.woff") format("woff"); }
+@font-face { font-family: MJXTEX-SC; src: url("lib/fonts/mathjax_script-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-T; src: url("lib/fonts/mathjax_typewriter-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-V; src: url("lib/fonts/mathjax_vector-regular.woff") format("woff"); }
+@font-face { font-family: MJXTEX-VB; src: url("lib/fonts/mathjax_vector-bold.woff") format("woff"); }
+mjx-c.mjx-c1D447.TEX-I::before { padding: 0.677em 0.704em 0px 0px; content: "T"; }
+mjx-c.mjx-c2212::before { padding: 0.583em 0.778em 0.082em 0px; content: "−"; }
+mjx-c.mjx-c1D446.TEX-I::before { padding: 0.705em 0.645em 0.022em 0px; content: "S"; }
+</style><div class="markdown-preview-sizer markdown-preview-section"><h1 class="page-title heading inline-title" id="ACA tutorial">ACA tutorial</h1><div class="el-h2 heading-wrapper"><h2 data-heading="Dependencies++" dir="auto" class="heading" id="Dependencies++"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Dependencies++</h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">If there are three WAW like A depends on B, B depends on C, and C depends on A. We need to write them all (even if they imply each other by transitive property)</li>
+<li data-line="1" dir="auto">RAW are only true data dependency, that is if A writes f1, B writes f1 and C reads f1, we only have C depends on B, and we cannot write also C depends on A</li>
+</ul></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="Standard pipeline" dir="auto" class="heading" id="Standard_pipeline"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Standard pipeline</h2><div class="heading-children"><div class="el-p"><p dir="auto">Remember: each type of instruction can perform different task in each stage. In the following picture (from EX1-slide15), are represented the operations performed in each stage for the different types of instructions:</p></div><div class="el-p"><p dir="auto"><span alt="Pasted image 20250624162830.png" src="Pasted image 20250624162830.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20250624162830.png" src="lib/media/pasted-image-20250624162830.png"></span><br>
+<span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" display="true"><mjx-math display="true" class="MJX-TEX" style="margin-left: 0px; margin-right: 0px;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mtext class="mjx-n" space="4"><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c75"></mjx-c><mjx-c class="mjx-c6D"></mjx-c><mjx-c class="mjx-c62"></mjx-c><mjx-c class="mjx-c65"></mjx-c><mjx-c class="mjx-c72"></mjx-c><mjx-c class="mjx-c20"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c66"></mjx-c><mjx-c class="mjx-c20"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c73"></mjx-c><mjx-c class="mjx-c74"></mjx-c><mjx-c class="mjx-c72"></mjx-c><mjx-c class="mjx-c75"></mjx-c><mjx-c class="mjx-c63"></mjx-c><mjx-c class="mjx-c74"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c73"></mjx-c></mjx-mtext></mjx-math></mjx-container></span><span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" display="true"><mjx-math display="true" class="MJX-TEX" style="margin-left: 0px; margin-right: 0px;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43C TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mfrac space="4"><mjx-frac type="d"><mjx-num><mjx-nstrut type="d"></mjx-nstrut><mjx-mtext class="mjx-n"><mjx-c class="mjx-c23"></mjx-c><mjx-c class="mjx-c63"></mjx-c><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c63"></mjx-c><mjx-c class="mjx-c6B"></mjx-c><mjx-c class="mjx-c20"></mjx-c><mjx-c class="mjx-c63"></mjx-c><mjx-c class="mjx-c79"></mjx-c><mjx-c class="mjx-c63"></mjx-c><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c65"></mjx-c><mjx-c class="mjx-c73"></mjx-c></mjx-mtext></mjx-num><mjx-dbox><mjx-dtable><mjx-line type="d"></mjx-line><mjx-row><mjx-den><mjx-dstrut type="d"></mjx-dstrut><mjx-mrow><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac></mjx-math></mjx-container></span><span class="math math-block is-loaded"><mjx-container class="MathJax" jax="CHTML" display="true"><mjx-math display="true" class="MJX-TEX" style="margin-left: 0px; margin-right: 0px;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D440 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mfrac space="4"><mjx-frac type="d"><mjx-num><mjx-nstrut type="d"></mjx-nstrut><mjx-mtext class="mjx-n"><mjx-c class="mjx-c63"></mjx-c><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c63"></mjx-c><mjx-c class="mjx-c6B"></mjx-c><mjx-c class="mjx-c20"></mjx-c><mjx-c class="mjx-c66"></mjx-c><mjx-c class="mjx-c72"></mjx-c><mjx-c class="mjx-c65"></mjx-c><mjx-c class="mjx-c71"></mjx-c><mjx-c class="mjx-c75"></mjx-c><mjx-c class="mjx-c65"></mjx-c><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c63"></mjx-c><mjx-c class="mjx-c79"></mjx-c></mjx-mtext></mjx-num><mjx-dbox><mjx-dtable><mjx-line type="d"></mjx-line><mjx-row><mjx-den><mjx-dstrut type="d"></mjx-dstrut><mjx-mrow><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D43C TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-msup space="3"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.393em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c36"></mjx-c></mjx-mn></mjx-script></mjx-msup></mjx-mrow></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac></mjx-math></mjx-container></span></p></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="Forwarding paths" dir="auto" class="heading" id="Forwarding_paths"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Forwarding paths</h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">Un forwarding path può collegare solo due CC successivi, es: se ho un forwarding path MEM-EX, posso collegare l'istruzione A che si trova in MEM all'istruzione X che si trova in EX, solo se questi stage sono distanziati da un ciclo di clock (es A a MEM a CC 1 e B a EX a CC 2), indipendentemente dal numero di istruzioni in mezzo</li>
+<li data-line="1" dir="auto">Per le load e store, il registro che server per il calcolo dell'address serve averlo nello stage EX, il registro che server per il scrivere/leggere il contenuto serve solo nello stage MEM</li>
+</ul></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="Complex pipeline" dir="auto" class="heading" id="Complex_pipeline"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Complex pipeline</h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">If the Issue stage has an unlimited buffer, there can be multiple instructions stalling in the issue stage at the same clock cycle, however the actual Issuing should be done one instruction at the time, while the others are still stalling. In general, if some instruction are stalling in the issue stage, the next instruction can enter the issue stage (without being marked as stalling), but cannot go on since in the next stages it will be stalled behind the previous instructions, it cannot happen that instruction B starts execution before instruction A (if order is A,B): it's the in order issue property! <span alt="Pasted image 20250705125742.png" src="Pasted image 20250705125742.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20250705125742.png" src="lib/media/pasted-image-20250705125742.png"></span><br>
+By removing the in order issue property, I3 can start as soon as possible:<br>
+<span alt="Pasted image 20250705130012.png" src="Pasted image 20250705130012.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20250705130012.png" src="lib/media/pasted-image-20250705130012.png"></span></li>
+<li data-line="3" dir="auto"><del>if an instruction should enter a certain stage (es: Decode) but cannot enter the next stage due to rules (es: cannot enter Issue since there are some WAR), then the instruction can enter the first stage (D) but its signed as Stalled, since it can be completed, then we will need a clock cycle of completion (D without any stall sign), and the next CC it can go to the next stage (Issue). It will be something like Ds Ds Ds D I. While different is the case in which the stage has completed but we realize we cannot go to the next stage for some problems with other instructions (es: other instructions are in the W stage and we are in E stage, in this case we would have something like E Es Es W) --&gt; see EX5-s62</del></li>
+<li data-line="4" dir="auto">If an instruction is in stall in the fetch stage, then the next instruction is postponed until it exits from F stage , since we need in order decode-&gt; see EX5-s63</li>
+<li data-line="5" dir="auto">Structural hazards (FU busy) cause stall in the Issue stage, since instruction cannot start Execution.</li>
+<li data-line="6" dir="auto">WB and Issue of two RAW dependent instruction can happen in the same CC</li>
+<li data-line="7" dir="auto">WB and Issue of two WAW-WAR dependent instructions can happen in the same CC</li>
+<li data-line="8" dir="auto"><strong>Branch</strong>: if there is not branch prediction, we need to stall before branch instruction reaches the stage in which the branch is resolved (ex ISSUE stage) and then wait the branch resolution in order to fetch the instruction after the branch. In case there is branch prediction, then we can proceed with fetching and issuing the next instruction after the branch, before the branch was solved. In this cases, as soon as the branch was solved, we need to ask if flushing the predicted instruction is needed. --&gt; EX5-s70</li>
+</ul></div><div class="el-p"><p dir="auto">Cases:</p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Instruction above is in stall in a stage S, the instruction below can only go on if the stalled instruction is not occupying its stage
+<ul>
+<li data-line="1" dir="auto">If we need to fetch and S is fetch, we postpone the fetch until the stall terminate</li>
+<li data-line="2" dir="auto">If we are in D and should go in I, generally we can perform the D stage but will stall there because we cannot go in I, but in case the I has a buffer, we can go and stall there. Ex3:<br>
+<span alt="Pasted image 20250708165649.png" src="Pasted image 20250708165649.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20250708165649.png" src="lib/media/pasted-image-20250708165649.png"></span> <span alt="Pasted image 20250708165703.png" src="Pasted image 20250708165703.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20250708165703.png" src="lib/media/pasted-image-20250708165703.png"></span></li>
+<li data-line="4" dir="auto">Otherwise, we stall.<br>
+Remember: each stage always need to spend a CC as non stalled, before or after the stalls.</li>
+</ul>
+</li>
+<li data-line="6" dir="auto">In case of WAR-WAW. We stall in D until our D (non-stalled any stall) is in the previous column wrt the WB of instruction we depend on.</li>
+<li data-line="7" dir="auto">In case of RAW, we stall in I until our I (non-stalled) is in the same column as the WB of instruction we depend on.</li>
+<li data-line="8" dir="auto">In case on struct hazard on WB, we stall on E until we can perform our WB.</li>
+</ul></div><div class="el-p"><p dir="auto">Case of branch: we can start fetching the next instruction as soon as the target is computed (depending on the assumption, it can happen in the fetch stage, so we will insert a new instruction which is stalling in F until the branch resolution), however the instruction will be stalled until the branch is resolved (depending on the assumption, it can happen at ID stage, after that, the actual F can happen). In case of branch prediction, we can avoid the stalling in fetch but we need to ask ourselves if we need to flash after the branch resolution. (ex5)</p></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="VLIW" dir="auto" class="heading" id="VLIW"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>VLIW</h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>In VLIW schema we insert instructions in the clock cycle they enter the IF unit. Fetch and decode happen simultaneously for operations in the same instruction. This has the following consequences:
+<ul>
+<li data-line="1" dir="auto">Operations in the same instruction will enter the execution unit after having their operands read and stored in "private" registers. This means that reads and writes to the same register can cohesist, since they will operate on different copies of the same value--&gt; WAR and WAW safe for instruction in the same bundle.</li>
+<li data-line="2" dir="auto">In case we have early evaluation of branch, we need understand when the operators will be available for the branch to execute, in particular if the branch has early evaluation (in ID stage). For example, here the <code>bne</code> has been positioned after seing that the register s4 was available 1 CC later.<br>
+<span alt="Pasted image 20250630102509.png" src="Pasted image 20250630102509.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20250630102509.png" src="lib/media/pasted-image-20250630102509.png"></span> <span alt="Pasted image 20250630102524.png" src="Pasted image 20250630102524.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20250630102524.png" src="lib/media/pasted-image-20250630102524.png"></span></li>
+</ul>
+</li>
+<li data-line="4" dir="auto">When representing VLIW scheduling, we use <code>IF, ID, EX, WB</code> as in the example above </li>
+<li data-line="5" dir="auto"><em>VLIW code must be conflict-free</em> means that we need to schedule the code in such a way that the dependencies don't cause hazards.</li>
+<li data-line="6" dir="auto">If pipeline units are described as <em>non-pipelined</em>, we need to wait that an instruction is completed (that is, the clock cycles are needed are over) before putting a new one in the same functional unit.</li>
+<li data-line="7" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Can appear with different scheduling algorithms:
+<ul>
+<li data-line="8" dir="auto">ASAP: instructions are scheduled as soon as possible</li>
+<li data-line="9" dir="auto">In order issue: instructions are scheduled so to respect the order, that is if operation B appears after operation A, then B cannot be scheduled after A, but at most in the same instruction </li>
+</ul>
+</li>
+<li data-line="10" dir="auto">If there is no assumption at all about branch, we can consider it a traditional branch with evaluation in the EX stage.</li>
+<li data-line="11" dir="auto">If the branch is the last operation, it should be scheduled in the last long instruction</li>
+</ul></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="Scoreboard" dir="auto" class="heading" id="Scoreboard"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Scoreboard</h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">
+<p><strong><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML"><mjx-math class="MJX-TEX"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em;"><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-script></mjx-msub></mjx-math></mjx-container></span></strong> <strong>flag in scoreboard</strong>: means "ready" but also "don't touch it is mine" set to <em>yes</em> when instruction is issued and is in read operand (that is, the register is ready for me to use it and we need to tell everybody that I need to use that register, so they don't touch it), is set to <em>no</em> when instruction is in Exec since it is being used (I need everybody to know that I'm using it and they can touch it).<br>
+<a data-href="07.ACA25-scoreboard.pdf#page=42&amp;annotation=2432R" href="università/aca/07.aca25-scoreboard.pdf#page=42&amp;annotation=2432R" class="internal-link" target="_self" rel="noopener nofollow">07.ACA25-scoreboard.pdf &gt; page=42&amp;annotation=2432R</a>: <strong>How to set Rj and Rk?</strong> We check the respective register in the register result status, if the cell is occupied by an operation that means that there is a FU which will need to write that register, and so the respective Rj (Rk) will be set to No, otherwise if the cell is empty we set it to Yes</p>
+</li>
+<li data-line="2" dir="auto">
+<p><strong>Clock and scoreboard</strong><a data-href="07.ACA25-scoreboard.pdf#page=39&amp;annotation=2430R" href="università/aca/07.aca25-scoreboard.pdf#page=39&amp;annotation=2430R" class="internal-link" target="_self" rel="noopener nofollow">07.ACA25-scoreboard.pdf &gt; page=39&amp;annotation=2430R</a>: Instruction B, who is waiting for instruction A to end, will enter the issue stage only the CC after the one in which A is in write result stage (because we need to wait scoreboard to be updated). <a data-href="07.ACA25-scoreboard.pdf#page=46&amp;annotation=2466R" href="università/aca/07.aca25-scoreboard.pdf#page=46&amp;annotation=2466R" class="internal-link" target="_self" rel="noopener nofollow">07.ACA25-scoreboard.pdf &gt; page=46&amp;annotation=2466R</a> On falling edge I inform scoreboard of things, scoreboard gets "updated" and on the following rising edge consequent operation can happen (for ex: rising edge I inform scoreboard exec is finished, rising edge scoreboard allows me to write back. Or falling edge I inform scoreboard I performed write back, rising edge scoreboard allows next instruction to go in).</p>
+</li>
+<li data-line="3" dir="auto">
+<p><strong>Counting clock cycles</strong>. <a data-href="07.ACA25-scoreboard.pdf#page=49&amp;annotation=2454R" href="università/aca/07.aca25-scoreboard.pdf#page=49&amp;annotation=2454R" class="internal-link" target="_self" rel="noopener nofollow">07.ACA25-scoreboard.pdf &gt; page=49&amp;annotation=2454R</a></p>
+<p>Execution starts at 9 ( I have 10 clock cycle left for execution of the MUL, included the 9th)<br>
+clock cycle 10 (still 8)<br>
+...<br>
+clock cycle 17 (still 1 clock cycle<br>
+clock cycle 18 (still 0 clock cycle --&gt; execution completed)</p>
+</li>
+<li data-line="10" dir="auto">
+<p><strong>Trick for scoreboard table</strong> Remember, scoreboard is in order issue. If we see out of order issue, we already know it is wrong</p>
+</li>
+<li data-line="11" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>
+<p>Only one WB per CC</p>
+<ul>
+<li data-line="12" dir="auto">Since in case of WAR it is not possible to perform WB, the results of instructions are held in FU until it is possible to write back, for this reason, if I have instruction A that completes execution in CC 5 and WB in CC 6, and instruction B that starts execution in CC 5, it must have used a different FU wrt the one used by instruction A, in fact the FU will be occupied in holding the result of A until CC 6</li>
+</ul>
+</li>
+<li data-line="13" dir="auto">
+<p><strong>Stalling in scoreboard</strong> Scoreboard stalls in Issue if spots WAW or structural hazards, while stalls in Read operand if it spots RAW hazard, stalls in WB if it spots WAR hazards (this, <strong>until the instruction from which it is dependend has completed the read operand phase</strong>). In all these cases, we write in our table the CC in which the stall ends. For example, if instruction B is dependend from A with a WAW dependency, then B will not have its ISSUE numbered untio instruction A performs its WB.</p>
+</li>
+<li data-line="14" dir="auto">
+<p>Exe start is always read operands +1. Exe complete is computed counting latency from start exe, wb is one CC later than exe complete, unless war or struc hazards (es, with 3 CC Latency: read operands 4, start exe 5, complete exe 7, wb 8)</p>
+</li>
+</ul></div><div class="el-h3 heading-wrapper"><h3 data-heading="Scoreboard con Explicit register renaming" dir="auto" class="heading" id="Scoreboard_con_Explicit_register_renaming"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Scoreboard con Explicit register renaming</h3><div class="heading-children"><div class="el-p"><p dir="auto">All D instruction occupy 64bits, depending on the size of register you occpy one or more (in general they occupy 2 register of 32 bits).<br>
+In the Issue stage we no more check for WAW, instaed we allocate a new physical register for the destination register, that is, we update the mapping in the rename table, based on the free list (the list of free physical registers).</p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">WAW and WAR are solved by design</li>
+<li data-line="1" dir="auto">Notice that if two different instructions write the same register, the virtual-p,,hysical mapping of this register is changed twice, however this is not a problem even if the first instruction has not completed the write back yet. Even if the mapping in the rename table is different from what it is expecting, it will write in the phyisical register it allocated at issue stage, and it will still result busy (so will not appear in the free list), eve if it does not appear in the rename table</li>
+</ul></div></div></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="[[Tomasulo]]" dir="auto" class="heading" id="[[Tomasulo]]"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><a data-href="Tomasulo" href="università/aca/notes/tomasulo.html" class="internal-link" target="_self" rel="noopener nofollow">Tomasulo</a></h2><div class="heading-children"><div class="el-p"><p dir="auto"><span alt="Pasted image 20250701120155.png" src="Pasted image 20250701120155.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20250701120155.png" src="lib/media/pasted-image-20250701120155.png"></span></p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">We reserve a functional unit for the execution of an instruction only at START EXE stage</li>
+<li data-line="1" dir="auto">We have to wait one clock cycle after a write back for a depending instruction to start (as in scoreboard)</li>
+<li data-line="2" dir="auto">Only one FU performing WB at a time (since we only have one CDB), in case multiple instruction need to write back, we can choose arbitrarily which ones goes first (or follow the directive of the exercise )</li>
+<li data-line="3" dir="auto">Reservation station are marked as free only after the WB!</li>
+<li data-line="4" dir="auto"><strong>Loads vs stores</strong>: Loads can be freerely moved among themselves</li>
+<li data-line="5" dir="auto"><strong>Loads vs stores, stores vs stores</strong> When a load address is computed (this happens in the <em>address unit</em> that is before issuing the instruction in a reservation station, so in the exercises we assume the address computation is done in the issue stage. N.B. Address computation is performed in order) it's compared with addresses in active store buffers (memory addresses targeted by stores). If there's a match, the load must wait for the conflicting store to complete (cannot be executed before it), otherwise we can move start executing the load before the store (for example if the store is waiting for a raw). Similarly, stores check for conflicts with other memory operations.</li>
+<li data-line="6" dir="auto">
+<pre><code data-line="7">ex: ![[Pasted image 20250702110311.png]]
+ ![[Pasted image 20250702110342.png]]
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg></button></pre>
+</li>
+<li data-line="9" dir="auto"><div class="list-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Check of table in Tomasulo:
+<ul>
+<li data-line="10" dir="auto">Issue in order?</li>
+<li data-line="11" dir="auto">RAW are respected?</li>
+<li data-line="12" dir="auto">If only one CDB, is there only one WB per CC?</li>
+</ul>
+</li>
+</ul></div><div class="el-h3 heading-wrapper"><h3 data-heading="Tomasulo with Rob" dir="auto" class="heading" id="Tomasulo_with_Rob"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Tomasulo with Rob</h3><div class="heading-children"><div class="el-p"><p dir="auto"><span alt="Pasted image 20250701120211.png" src="Pasted image 20250701120211.png" class="internal-embed media-embed image-embed is-loaded"><img alt="Pasted image 20250701120211.png" src="lib/media/pasted-image-20250701120211.png"></span></p></div><div class="el-ul"><ul>
+<li data-line="0" dir="auto">The Write is now the stage in which we are going to write the result to the ROB, while the Commit is the stage in which we write the result to the register file. Later instructions can start execution if their operands registers are available in the ROB (even if their are not yet in the register file).</li>
+<li data-line="1" dir="auto">If the ROB Is full, we get a structural hazard, this means we cannot issue new instructions. </li>
+<li data-line="2" dir="auto">ROB allows for speculative execution, this executing instructions before we know if we should (es: second iteration of a cycle), however we need to keep a counter that counts the CC elapsed to the misprediction, it starts from the first instruction that we don't know if we should execute: when we reach the CC number that we needed to know that we mispredicted, we need to flush the mispredicted instructions from the ROB</li>
+</ul></div></div></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="Cache penalties" dir="auto" class="heading" id="Cache_penalties"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Cache penalties</h2><div class="heading-children"><div class="el-p"><p dir="auto">Cache penalties are paid in the execute stage.<br>
+The processor doesn't have any knowledge about memory. Read operand phase access register file, not memory. Execution phase of a memory operation means: compute the address (where we should go in the memory) and then ask for the value (if its a load) or send the value (is it's a store), it's here that we pay the cache penalties.</p></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="Cache coherency" dir="auto" class="heading" id="Cache_coherency"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Cache coherency</h2><div class="heading-children"><div class="el-ul"><ul>
+<li data-line="0" dir="auto">If a processor has a resouce invalid, it will stay so even if another process reads the new resource (it will not become shared)</li>
+<li data-line="1" dir="auto">if a processor has a resource modified, as soon as another process reads it , it will become shared for both</li>
+</ul></div></div></div><div class="el-h2 heading-wrapper"><h2 data-heading="Possible configuration exercise" dir="auto" class="heading" id="Possible_configuration_exercise"><div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div>Possible configuration exercise</h2><div class="heading-children"><div class="el-p"><p dir="auto">Remember to check for only one WB, and remember it can happen that instruction delay WB due to structural hazard on WB, this can change the latency you compute for a FU</p></div><div class="mod-footer mod-ui"></div></div></div></div></div></div><div class="sidebar-right sidebar"><div class="sidebar-handle"></div><div class="sidebar-topbar"><div class="topbar-content"></div><div class="clickable-icon sidebar-collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><path d="M21 3H3C1.89543 3 1 3.89543 1 5V19C1 20.1046 1.89543 21 3 21H21C22.1046 21 23 20.1046 23 19V5C23 3.89543 22.1046 3 21 3Z"></path><path d="M10 4V20"></path><path d="M4 7H7"></path><path d="M4 10H7"></path><path d="M4 13H7"></path></svg></div></div><div class="sidebar-content"><div class="graph-view-wrapper"><div class="sidebar-section-header">Interactive Graph</div><div class="graph-view-placeholder">
+		<div class="graph-view-container">
+			<div class="graph-icon graph-expand" role="button" aria-label="Expand" data-tooltip-position="top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+			<canvas id="graph-canvas" class="hide" width="512px" height="512px"></canvas>
+		</div>
+		</div></div><div class="tree-container mod-root nav-folder tree-item outline-tree" data-depth="0"><div class="tree-header"><span class="sidebar-section-header">Table Of Contents</span><button class="clickable-icon collapse-tree-button" aria-label="Collapse All"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></button></div><div class="tree-scroll-area tree-item-children nav-folder-children"><div class="tree-item mod-tree-folder nav-folder mod-collapsible is-collapsed" style="display: none;"></div><div class="tree-item" data-depth="1"><a class="tree-link" href="università/aca/aca-tutorial.html#ACA tutorial"><div class="tree-item-contents heading-link" heading-name="ACA tutorial"><span class="tree-item-title">ACA tutorial</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="2"><a class="tree-link" href="università/aca/aca-tutorial.html#Dependencies++"><div class="tree-item-contents heading-link" heading-name="Dependencies++"><span class="tree-item-title">Dependencies++</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="università/aca/aca-tutorial.html#Standard_pipeline"><div class="tree-item-contents heading-link" heading-name="Standard pipeline"><span class="tree-item-title">Standard pipeline</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="università/aca/aca-tutorial.html#Forwarding_paths"><div class="tree-item-contents heading-link" heading-name="Forwarding paths"><span class="tree-item-title">Forwarding paths</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="università/aca/aca-tutorial.html#Complex_pipeline"><div class="tree-item-contents heading-link" heading-name="Complex pipeline"><span class="tree-item-title">Complex pipeline</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="università/aca/aca-tutorial.html#VLIW"><div class="tree-item-contents heading-link" heading-name="VLIW"><span class="tree-item-title">VLIW</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-link" href="università/aca/aca-tutorial.html#Scoreboard"><div class="tree-item-contents heading-link" heading-name="Scoreboard"><div class="collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="tree-item-title">Scoreboard</span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="3"><a class="tree-link" href="università/aca/aca-tutorial.html#Scoreboard_con_Explicit_register_renaming"><div class="tree-item-contents heading-link" heading-name="Scoreboard con Explicit register renaming"><span class="tree-item-title">Scoreboard con Explicit register renaming</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div><div class="tree-item mod-collapsible" data-depth="2"><a class="tree-link" href="università/aca/aca-tutorial.html#[[Tomasulo]]"><div class="tree-item-contents heading-link" heading-name="[[Tomasulo]]"><div class="collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle"><path d="M3 8L12 17L21 8"></path></svg></div><span class="tree-item-title"><a data-href="Tomasulo" href="Tomasulo" class="internal-link" target="_blank" rel="noopener nofollow">Tomasulo</a></span></div></a><div class="tree-item-children nav-folder-children"><div class="tree-item" data-depth="3"><a class="tree-link" href="università/aca/aca-tutorial.html#Tomasulo_with_Rob"><div class="tree-item-contents heading-link" heading-name="Tomasulo with Rob"><span class="tree-item-title">Tomasulo with Rob</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="università/aca/aca-tutorial.html#Cache_penalties"><div class="tree-item-contents heading-link" heading-name="Cache penalties"><span class="tree-item-title">Cache penalties</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="università/aca/aca-tutorial.html#Cache_coherency"><div class="tree-item-contents heading-link" heading-name="Cache coherency"><span class="tree-item-title">Cache coherency</span></div></a><div class="tree-item-children nav-folder-children"></div></div><div class="tree-item" data-depth="2"><a class="tree-link" href="università/aca/aca-tutorial.html#Possible_configuration_exercise"><div class="tree-item-contents heading-link" heading-name="Possible configuration exercise"><span class="tree-item-title">Possible configuration exercise</span></div></a><div class="tree-item-children nav-folder-children"></div></div></div></div></div></div></div><script defer="">let rs = document.querySelector(".sidebar-right"); rs.classList.add("is-collapsed"); if (window.innerWidth > 768) rs.classList.remove("is-collapsed"); rs.style.setProperty("--sidebar-width", localStorage.getItem("sidebar-right-width"));</script></div></div></body></html>
